@@ -1,0 +1,1 @@
+document.getElementById('bg-video').play();

@@ -48,7 +48,7 @@ h2 {
 
 .dark-box {
     background-color: rgba(2, 0, 0, 0.852);
-    padding: 1em 3em 6em 2em;
+    padding: 1em 3em 4em 2em;
     max-width: 425px;
     border-radius: 22px;
 }
@@ -62,6 +62,7 @@ p {
 
 #gift-btn {
     background-color: rgb(227, 54, 6);
+    color: black;
     padding: 1em 7em 1em 7em;
     border-radius: 12px;
     border-style: none;
@@ -77,13 +78,36 @@ p {
 
 @media (max-width: 750px) {
     h1 {
-        font-size: 330%;
+        font-size: 270%;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 150%;
+        text-align: center;
+    }
+
+    .flex-titles {
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .title {
         margin-right: 0%;
         margin: 1em;
 
+    }
+
+    .dark-box {
+        margin: 1em;
+        padding: 3em 2em 3em 2em;
+        max-width: 410px;
+    }
+
+    #gift-btn {
+        padding: .5em 5em .5em 5em;
+        font-size: 18px;
     }
 
 }
