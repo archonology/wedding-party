@@ -1,0 +1,89 @@
+body {
+    background-color: black;
+    color: rgb(29, 12, 4);
+    font-size: 120%;
+}
+
+#bg-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 400%;
+    font-weight: 700;
+    line-height: 0;
+    color: rgb(255, 242, 209);
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 3px 2px black;
+}
+
+h2 {
+    font-family: 'Satisfy', cursive;
+    font-size: 180%;
+}
+
+.flex-titles {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.title {
+    margin-top: 30%;
+    margin-right: 3%;
+}
+
+#amper {
+    color: rgb(23, 22, 22);
+}
+
+.dark-box {
+    background-color: rgba(2, 0, 0, 0.852);
+    padding: 1em 3em 6em 2em;
+    max-width: 425px;
+    border-radius: 22px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.2;
+    color: rgb(246, 245, 245);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#gift-btn {
+    background-color: rgb(227, 54, 6);
+    padding: 1em 7em 1em 7em;
+    border-radius: 12px;
+    border-style: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: 700;
+    transition: .5s ease-in-out;
+}
+
+#gift-btn:hover {
+    background-color: rgb(238, 163, 2);
+}
+
+@media (max-width: 750px) {
+    h1 {
+        font-size: 330%;
+    }
+
+    .title {
+        margin-right: 0%;
+        margin: 1em;
+
+    }
+
+}
