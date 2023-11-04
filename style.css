@@ -1,5 +1,6 @@
 body {
-    background-color: black;
+    background-image: url(./assests/fireplace\ poster.png);
+    background-size: auto;
     color: rgb(29, 12, 4);
     font-size: 120%;
 }
@@ -17,12 +18,11 @@ body {
 }
 
 h1 {
-    font-size: 400%;
-    font-weight: 700;
+    font-size: 200%;
     line-height: 0;
-    color: rgb(255, 242, 209);
-    font-family: 'Playfair Display', serif;
-    text-shadow: 2px 3px 2px black;
+    color: rgb(40, 37, 32);
+    font-family: 'Courier New', Courier, monospace;
+    /* text-shadow: 2px 3px 2px black; */
 }
 
 h2 {
