@@ -1,6 +1,6 @@
 function play(e) {
     e.preventDefault();
-    document.getElementById('bg-video').autoplay = true;
+    document.getElementById('bg-video').start();
 }
 
 
