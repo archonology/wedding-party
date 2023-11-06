@@ -30,9 +30,9 @@ const Home = () => {
           />
         </div>
         <div>
-          <a href="https://buy.stripe.com/3csbIR2S89s03oA002">
+          {/* <a href="https://buy.stripe.com/3csbIR2S89s03oA002">
             <button id="gift-btn">Give a Gift</button>
-          </a>
+          </a> */}
         </div>
       </div>
     </>

@@ -1,6 +1,10 @@
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: url(./assests/table.png);
+  background-image: url(./assests/DSC_0092.png);
+  background-position: top;
+  background-size: cover;
+  height: 200%;
+  width: 200%;
 }
 
 /* .home-box {} */
