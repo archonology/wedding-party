@@ -24,13 +24,13 @@
 
 .back {
     background-image: url(./assests/invite1.png);
-    box-shadow: -5px 15px 20px rgba(0, 0, 0, 0.455);
+    /* box-shadow: -1px 6px 20px rgba(0, 0, 0, 0.455); */
     transition: .2s;
 }
 
 .front {
     background-image: url(./assests/invite2.png);
-    box-shadow: -5px 15px 20px rgba(0, 0, 0, 0.408);
+    /* box-shadow: -5px 15px 20px rgba(0, 0, 0, 0.408); */
     transition: .2s;
 }
 
@@ -112,13 +112,13 @@
 
     .c {
         width: 100%;
-        height: 528px;
+        height: 560px;
     }
 
     .front,
     .back {
         background-size: contain;
-        background-repeat: no-repeat;
+        background-repeat: repeat-x;
     }
 
 
