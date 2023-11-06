@@ -7,7 +7,10 @@ body {
   width: 200%;
 }
 
-/* .home-box {} */
+.nav {
+  position: absolute;
+  margin-top: 0;
+}
 
 .img-shadow {
   box-shadow: -5px 9px 25px rgba(0, 0, 0, 0.561);
@@ -34,7 +37,15 @@ body {
   box-shadow: -9px 14px 13px rgba(0, 0, 0, 0.476);
 }
 
-#gift-btn:hover {
-  background-color: rgb(119, 205, 58);
+/* #gift-btn:hover {
+  background-color: #77cd3a;
   box-shadow: -9px 14px 15px rgba(0, 0, 0, 0.497);
+} */
+
+.direct:hover {
+  color: rgb(243, 215, 8);
+}
+
+.give:hover {
+  color: rgb(243, 215, 8);
 }
