@@ -18,28 +18,26 @@ const Header = () => {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, fontFamily: "serif", fontSize: "27px" }}
+            sx={{ flexGrow: 1, fontFamily: "codystar", fontSize: "47px" }}
           >
-            Heidi & Reed
+            Reed & Heidi
           </Typography>
           <Box>
             <PopupState variant="popover" popupId="demo-popup-menu">
               {(popupState) => (
                 <React.Fragment>
                   <Button
-                    color="warning"
+                    color="secondary"
                     {...bindTrigger(popupState)}
-                    style={{ fontSize: "18px", fontFamily:'serif' }}
+                    style={{ fontSize: "28px", fontFamily: "barriecito" }}
                   >
                     More
                   </Button>
                   <Menu {...bindMenu(popupState)}>
-                    <MenuItem
-                      onClick={popupState.close}
-                    >
+                    <MenuItem onClick={popupState.close}>
                       <a href={weddingInfo} download={weddingInfo}>
                         <Typography
-                          color="error"
+                          color="secondary"
                           style={{
                             fontFamily: "serif",
                             fontSize: "20px",
@@ -54,16 +52,14 @@ const Header = () => {
                         </Typography>
                       </a>
                     </MenuItem>
-                    <MenuItem
-                      onClick={popupState.close}
-                    >
+                    <MenuItem onClick={popupState.close}>
                       <a
                         href="https://www.google.com/maps/place/101+Kennedy+Memorial+Dr,+Hoyt+Lakes,+MN+55750/@47.5203144,-92.1517386,17z/data=!3m1!4b1!4m6!3m5!1s0x52a57b69aff0ae05:0x47a1787c383c706f!8m2!3d47.5203144!4d-92.1491637!16s%2Fg%2F11cpn1rq17?entry=ttu"
                         target="_blank"
                         rel="nonrefferer"
                       >
                         <Typography
-                          color="error"
+                          color="secondary"
                           style={{
                             fontFamily: "serif",
                             fontSize: "20px",
@@ -75,12 +71,10 @@ const Header = () => {
                         </Typography>
                       </a>
                     </MenuItem>
-                    <MenuItem
-                      onClick={popupState.close}
-                    >
+                    <MenuItem onClick={popupState.close}>
                       <a href="https://buy.stripe.com/3csbIR2S89s03oA002">
                         <Typography
-                          color="error"
+                          color="secondary"
                           style={{
                             fontFamily: "serif",
                             fontSize: "20px",

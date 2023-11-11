@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSpring, a } from "@react-spring/web";
 import styles from "../styles.module.css";
+import trapKeep from "../assests/trapKeep1.png";
 
 const Home = () => {
   const [flipped, set] = useState(false);
@@ -11,7 +12,17 @@ const Home = () => {
   });
   return (
     <>
-      <div className="home-box">
+      <div className="homeBanner1">
+        {/* <img src={trapKeep} alt="trapper keeper"  width={400} /> */}
+      </div>
+      <div className="homeBanner2"></div>
+      <div className="homeBanner3"></div>
+      <div className="homeBanner4"></div>
+      <div className="homeBanner5"></div>
+      <div className="homeBanner6"></div>
+      <div className="homeBanner7"></div>
+      <div className="homeBanner8"></div>
+      {/* <div className="home-box">
         <div
           className={styles.container}
           onClick={() => set((state) => !state)}
@@ -29,12 +40,12 @@ const Home = () => {
             }}
           />
         </div>
-        <div>
-          {/* <a href="https://buy.stripe.com/3csbIR2S89s03oA002">
+        <div> */}
+      {/* <a href="https://buy.stripe.com/3csbIR2S89s03oA002">
             <button id="gift-btn">Give a Gift</button>
           </a> */}
-        </div>
-      </div>
+      {/* </div> */}
+      {/* </div> */}
     </>
   );
 };
