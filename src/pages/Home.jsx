@@ -1,51 +1,35 @@
 import React, { useState } from "react";
-import { useSpring, a } from "@react-spring/web";
-import styles from "../styles.module.css";
-import trapKeep from "../assests/trapKeep1.png";
+import Player from "../components/Player";
 
 const Home = () => {
-  const [flipped, set] = useState(false);
-  const { transform, opacity } = useSpring({
-    opacity: flipped ? 1 : 0,
-    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  });
   return (
     <>
-      <div className="homeBanner1">
-        {/* <img src={trapKeep} alt="trapper keeper"  width={400} /> */}
+      <div className="box">
+        <div className="homeBanner1">
+          <h2>Reed & Heidi's Post Wedding Party</h2>
+          <p className="about">
+            Heidi and Reed got married! Now it's time to party. Press play on
+            the song below to get all the details!
+          </p>
+          <Player />
+        </div>
       </div>
-      <div className="homeBanner2"></div>
-      <div className="homeBanner3"></div>
-      <div className="homeBanner4"></div>
+      <div className="homeBanner2">
+        <h2>Where?</h2>
+        <p className="about">Hoyt Lakes Community Center</p>
+      </div>
+      <div className="homeBanner3">
+        <h2>When?</h2>
+        <p className="about">October 5th, 2023</p>
+      </div>
+      <div className="homeBanner4">
+        <h2>Lodging?</h2>
+        <p className="about">Hoyt Lakes Country Inn</p>
+      </div>
       <div className="homeBanner5"></div>
       <div className="homeBanner6"></div>
       <div className="homeBanner7"></div>
       <div className="homeBanner8"></div>
-      {/* <div className="home-box">
-        <div
-          className={styles.container}
-          onClick={() => set((state) => !state)}
-        >
-          <a.div
-            className={`${styles.c} ${styles.back}`}
-            style={{ opacity: opacity.to((o) => 1 - o), transform }}
-          />
-          <a.div
-            className={`${styles.c} ${styles.front}`}
-            style={{
-              opacity,
-              transform,
-              rotateX: "180deg",
-            }}
-          />
-        </div>
-        <div> */}
-      {/* <a href="https://buy.stripe.com/3csbIR2S89s03oA002">
-            <button id="gift-btn">Give a Gift</button>
-          </a> */}
-      {/* </div> */}
-      {/* </div> */}
     </>
   );
 };

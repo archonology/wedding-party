@@ -13,21 +13,26 @@ import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 const Header = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="absolute" style={{ backgroundColor: "black" }}>
+      <AppBar position="fixed" style={{ backgroundColor: "gold" }}>
         <Toolbar>
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, fontFamily: "codystar", fontSize: "47px" }}
+            sx={{
+              flexGrow: 1,
+              fontFamily: "'Londrina Solid', sans-serif;, sans-serif;",
+              fontSize: "67px",
+              color: "black",
+            }}
           >
-            Reed & Heidi
+            Heidi & Reed's PWP
           </Typography>
           <Box>
             <PopupState variant="popover" popupId="demo-popup-menu">
               {(popupState) => (
                 <React.Fragment>
                   <Button
-                    color="secondary"
+                    color="info"
                     {...bindTrigger(popupState)}
                     style={{ fontSize: "28px", fontFamily: "barriecito" }}
                   >
@@ -39,8 +44,8 @@ const Header = () => {
                         <Typography
                           color="secondary"
                           style={{
-                            fontFamily: "serif",
-                            fontSize: "20px",
+                            fontFamily: "barriecito",
+                            fontSize: "40px",
                             fontWeight: "700",
                             marginLeft: "1px",
                           }}
@@ -61,8 +66,8 @@ const Header = () => {
                         <Typography
                           color="secondary"
                           style={{
-                            fontFamily: "serif",
-                            fontSize: "20px",
+                            fontFamily: "barriecito",
+                            fontSize: "40px",
                             fontWeight: "700",
                             marginRight: "5px",
                           }}
@@ -76,8 +81,8 @@ const Header = () => {
                         <Typography
                           color="secondary"
                           style={{
-                            fontFamily: "serif",
-                            fontSize: "20px",
+                            fontFamily: "barriecito",
+                            fontSize: "40px",
                             fontWeight: "700",
                             marginLeft: "5px",
                           }}

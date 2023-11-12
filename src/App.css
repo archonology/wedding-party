@@ -1,67 +1,135 @@
-/* body {
+body {
   color: rgb(var(--foreground-rgb));
-  background-image: url(./assests/DSC_0092.png);
-  background-position: top;
-  background-size: cover;
-  height: 1500px;
-  width: auto;
-} */
-
-.homeBanner1 {
   background-image: url(./assests/90sUni.png);
+  background-position: left;
   background-size: cover;
-  width: 2000px;
-  height: 2000px;
+  height: 900%;
 }
 
-.homeBanner2 {
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 2em;
+}
+
+.homeBanner1 {
   background-image: url(./assests/trapKeep1.png);
   background-size: cover;
-  width: 2000px;
-  height: 2000px;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12em;
+  /* color: #fc27e0; */
+}
+
+
+
+.col {
+  flex-direction: column;
+
+}
+
+h2 {
+  color: honeydew;
+  padding: .3em;
+  font-size: 78px;
+  font-family: 'Bakbak One', sans-serif;
+  background-color: rgb(10, 10, 11);
+  flex-basis: 1 0 100%;
+  text-align: center;
+}
+
+.about {
+  font-family: 'Bakbak One', sans-serif;
+  font-size: 30px;
+  padding: .3em;
+  margin-bottom: -2em;
+  background-color: ivory;
+  color: black;
+  text-align: center;
+  margin-top: 0;
+}
+
+.player {
+  flex-basis: 1 0 100%;
+  margin-bottom: 2em;
+  margin-top: -2em;
+  padding-top: -2em;
+}
+
+/* .one {
+  background-color: rgb(159, 32, 140);
+  width: 500px;
+  height: 300px;
+
+} */
+
+.homeBanner2 {
+  background-image: url(./assests/savedbyuni.png);
+  background-size: cover;
+  min-width: 100%;
+  min-height: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0em;
 }
 
 .homeBanner3 {
-  background-image: url(./assests/savedbyuni.png);
+  background-image: url(./assests/jaguar.png);
   background-size: cover;
-  width: 2000px;
-  height: 2000px;
+  min-width: 100%;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0em;
 }
 
 .homeBanner4 {
-  background-image: url(./assests/fulljag.png);
-  background-size: cover;
-  width: 2000px;
-  height: 2000px;
+  background-image: url(./assests/trapper2.png);
+    background-size: cover;
+    min-width: 100%;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0em;
 }
-
+/* 
 .homeBanner5 {
   background-image: url(./assests/clouds.png);
   background-size: cover;
-  width: 2000px;
-  height: 2000px;
+  width: 100%;
+  height: 100%;
 }
 
 .homeBanner6 {
   background-image: url(./assests/lisaf.png);
   background-size: cover;
-  width: 2000px;
-  height: 2000px;
+  width: 100%;
+  height: 100%;
 }
 
 .homeBanner7 {
   background-image: url(./assests/uhoh.png);
   background-size: cover;
-  width: 2000px;
-  height: 2000px;
+  width: 100%;
+  height: 100%;
 }
 
 .homeBanner8 {
   background-image: url(./assests/90sjag.png);
   background-size: cover;
-  width: 2000px;
-  height: 2000px;
-}
+  width: 100%;
+  height: 100%;
+} */
 
 .nav {
   position: absolute;
