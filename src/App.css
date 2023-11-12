@@ -1,16 +1,14 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-image: url(./assests/90sUni.png);
-  background-position: left;
-  background-size: cover;
-  height: 900%;
+  background-size: contain;
+  /* height: 100%; */
 }
 
 .box {
   display: flex;
-  align-items: center;
-  justify-content: end;
-  padding: 2em;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .homeBanner1 {
@@ -18,19 +16,10 @@ body {
   background-size: cover;
   min-width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 12em;
-  /* color: #fc27e0; */
 }
 
-
-
-.col {
-  flex-direction: column;
-
-}
 
 h2 {
   color: honeydew;
@@ -38,19 +27,16 @@ h2 {
   font-size: 78px;
   font-family: 'Bakbak One', sans-serif;
   background-color: rgb(10, 10, 11);
-  flex-basis: 1 0 100%;
   text-align: center;
 }
 
 .about {
   font-family: 'Bakbak One', sans-serif;
   font-size: 30px;
-  padding: .3em;
-  margin-bottom: -2em;
   background-color: ivory;
   color: black;
-  text-align: center;
-  margin-top: 0;
+  text-align: left;
+  padding: 20px;
 }
 
 .player {
@@ -93,15 +79,16 @@ h2 {
 
 .homeBanner4 {
   background-image: url(./assests/trapper2.png);
-    background-size: cover;
-    min-width: 100%;
-    min-height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 0em;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0em;
 }
+
 /* 
 .homeBanner5 {
   background-image: url(./assests/clouds.png);
@@ -131,10 +118,10 @@ h2 {
   height: 100%;
 } */
 
-.nav {
-  position: absolute;
+/* .nav {
+  position: relative;
   margin-top: 0;
-}
+} */
 
 /* .img-shadow {
   box-shadow: -5px 9px 25px rgba(0, 0, 0, 0.561);
@@ -173,3 +160,22 @@ h2 {
 .give:hover {
   color: rgb(231, 194, 9);
 } */
+
+@media only screen and (max-width: 460px) {
+
+  .homeBanner2,
+  .homeBanner3,
+  .homeBanner4 {
+    min-height: 100%;
+  }
+
+  h2 {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+
+  .about {
+    padding-top: 0;
+  }
+
+}

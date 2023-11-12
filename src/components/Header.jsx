@@ -13,16 +13,19 @@ import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 const Header = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" style={{ backgroundColor: "gold" }}>
+      <AppBar position="relative" style={{ backgroundColor: "gold" }}>
         <Toolbar>
           <Typography
-            variant="h6"
+            variant="h1"
             component="div"
+            className="title"
             sx={{
               flexGrow: 1,
+              flexShrink: 3,
               fontFamily: "'Londrina Solid', sans-serif;, sans-serif;",
-              fontSize: "67px",
+              fontSize: "57px",
               color: "black",
+              padding: '.3em'
             }}
           >
             Heidi & Reed's PWP
@@ -32,7 +35,7 @@ const Header = () => {
               {(popupState) => (
                 <React.Fragment>
                   <Button
-                    color="info"
+                    color="secondary"
                     {...bindTrigger(popupState)}
                     style={{ fontSize: "28px", fontFamily: "barriecito" }}
                   >

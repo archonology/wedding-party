@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
@@ -8,21 +9,37 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import PauseIcon from "@mui/icons-material/Pause";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import album from "../assests/trapper2.png";
+import dju from "../assests/dju.mp3";
+
+const useAudio = () => {
+  const [audio] = useState(new Audio(dju));
+  const [playing, setPlaying] = useState(false);
+
+  const toggle = () => setPlaying(!playing);
+
+  useEffect(() => {
+    playing ? audio.play() : audio.pause();
+    audio.loop = true;
+  }, [playing]);
+
+  return [playing, toggle];
+};
 
 export default function Player() {
   const theme = useTheme();
+  const [playing, toggle] = useAudio(dju);
 
   return (
     <Card
       sx={{
         display: "flex",
-        maxWidth: "300px",
-        // marginLeft: "3em",
+        maxWidth: "400px",
         marginTop: "6em",
-          }}
-          className="player"
+      }}
+      className="player"
     >
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <CardContent sx={{ flex: "1 0 auto" }}>
@@ -45,8 +62,17 @@ export default function Player() {
               <SkipPreviousIcon />
             )}
           </IconButton>
-          <IconButton aria-label="play/pause">
-            <PlayArrowIcon sx={{ height: 38, width: 38 }} />
+          <IconButton aria-label="play/pause" onClick={toggle}>
+            {playing ? (
+              <>
+                {" "}
+                <PauseIcon sx={{ height: 38, width: 38 }} />
+              </>
+            ) : (
+              <>
+                <PlayArrowIcon sx={{ height: 38, width: 38 }} />
+              </>
+            )}
           </IconButton>
           <IconButton aria-label="next">
             {theme.direction === "rtl" ? (
