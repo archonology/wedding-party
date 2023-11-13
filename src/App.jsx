@@ -4,6 +4,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Header from "./components/Header";
 import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 const darkTheme = createTheme({
   palette: {
@@ -18,7 +19,17 @@ function App() {
     <>
       <ThemeProvider theme={darkTheme}>
         <Header />
+        <div className="donate">
+          <a
+            href="https://buy.stripe.com/3csbIR2S89s03oA002"
+            target="_blank"
+            rel="nonreferrer"
+          >
+            <button className="donate-button">Make a Gift</button>
+          </a>
+        </div>
         <Home />
+        <Footer />
       </ThemeProvider>
     </>
   );

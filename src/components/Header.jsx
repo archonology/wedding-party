@@ -23,7 +23,7 @@ const Header = () => {
               flexGrow: 1,
               flexShrink: 3,
               fontFamily: "'Londrina Solid', sans-serif;, sans-serif;",
-              fontSize: "57px",
+              fontSize: "47px",
               color: "black",
               padding: '.3em'
             }}
