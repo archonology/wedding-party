@@ -35,7 +35,7 @@ body {
 
 h1 {
   color: rgb(254, 252, 252);
-  padding: .5em;
+  padding: 1em;
   font-size: 58px;
   font-family: 'Londrina Solid', sans-serif;
   background-color: rgb(7, 7, 7);
@@ -88,6 +88,10 @@ h2 {
   font-family: 'Bakbak One', sans-serif;
   background-color: rgb(10, 10, 11);
   text-align: center;
+}
+
+.homeBanner1 .about {
+  max-width: 900px;
 }
 
 .about {
@@ -180,12 +184,12 @@ h2 {
   .donate {
     position: fixed;
     right: 10px;
-    bottom: 40px;
+    bottom: 15px;
     z-index: 1;
   }
 
   .donate-button {
-    padding: 1em;
+    padding: .7em;
     margin-right: 10px;
 
   }

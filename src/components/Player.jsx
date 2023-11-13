@@ -36,7 +36,7 @@ export default function Player() {
     <Card
       sx={{
         display: "flex",
-        maxWidth: "600px",
+        maxWidth: "500px",
         marginTop: "1em",
       }}
       className="player"
