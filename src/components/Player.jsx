@@ -36,7 +36,7 @@ export default function Player() {
     <Card
       sx={{
         display: "flex",
-        maxWidth: "500px",
+        maxWidth: "380px",
         marginTop: "1em",
       }}
       className="player"
@@ -85,7 +85,7 @@ export default function Player() {
       </Box>
       <CardMedia
         component="img"
-        sx={{ maxWidth: 400 }}
+        sx={{ width: 300 }}
         image={album}
         alt="Live from space album cover"
       />
