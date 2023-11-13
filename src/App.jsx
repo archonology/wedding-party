@@ -25,7 +25,7 @@ function App() {
             target="_blank"
             rel="nonreferrer"
           >
-            <button className="donate-button">Make a Gift</button>
+            <button className="donate-button">Give</button>
           </a>
         </div>
         <Home />

@@ -11,7 +11,7 @@ import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
-import album from "../assests/trapper2.png";
+import album from "../assests/album.png";
 import dju from "../assests/dju.mp3";
 
 const useAudio = () => {
@@ -36,8 +36,8 @@ export default function Player() {
     <Card
       sx={{
         display: "flex",
-        maxWidth: "400px",
-        marginTop: "6em",
+        maxWidth: "600px",
+        marginTop: "1em",
       }}
       className="player"
     >
@@ -85,7 +85,7 @@ export default function Player() {
       </Box>
       <CardMedia
         component="img"
-        sx={{ width: 151 }}
+        sx={{ width: 400 }}
         image={album}
         alt="Live from space album cover"
       />

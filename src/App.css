@@ -5,14 +5,23 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   background-image: url(./assests/90sUni.png);
-  background-size: contain;
-  /* height: 100%; */
+  background-size: auto;
 }
 
 .box {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.hb {
+  background-size: cover;
+  min-width: 100%;
+  min-height: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
 }
 
 .homeBanner1 {
@@ -47,7 +56,7 @@ h1 {
   font-size: 18px;
   color: black;
   border: none;
-  box-shadow: 0 17px 20px rgba(0, 0, 0, 0.65);
+  box-shadow: -4px 5px black;
   transition: .7s;
   z-index: 1;
   margin-right: 20px;
@@ -62,15 +71,14 @@ h1 {
 }
 
 .toTop-button {
-  padding: .7em;
+  padding: .3em;
   background-color: hotpink;
   font-family: 'Bakbak One', sans-serif;
   color: black;
   border: none;
-  box-shadow: 0 17px 20px rgba(0, 0, 0, 0.65);
+  box-shadow: -4px 5px black;
   transition: .5s ease-in-out;
   z-index: 1;
-  border-radius: 100%;
 }
 
 h2 {
@@ -84,7 +92,7 @@ h2 {
 
 .about {
   font-family: 'Bakbak One', sans-serif;
-  font-size: 30px;
+  font-size: 33px;
   background-color: ivory;
   color: black;
   text-align: left;
@@ -93,17 +101,6 @@ h2 {
 
 .player {
   margin-bottom: 10em;
-}
-
-.hb {
-  background-size: cover;
-  min-width: 100%;
-  min-height: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 0em;
 }
 
 .homeBanner2 {
@@ -119,24 +116,34 @@ h2 {
 }
 
 .homeBanner5 {
-  background-image: url(./assests/beach.png);
+  background-image: url(./assests/lisaf.png);
+}
+
+
+.homeBanner3 .about {
+  font-size: 42px;
+  text-align: center;
 }
 
 .homeBanner5 .about {
   max-width: 500px;
+  margin-top: 3em;
 }
 
 .homeBanner5 .about span {
-  font-size: 30px;
-  color: rgb(14, 168, 124);
+  color: rgb(150, 14, 168);
 }
 
 .homeBanner6 {
-  background-image: url(./assests/love.png);
+  background-image: url(./assests/90sjag.png);
 }
 
 .homeBanner7 {
-  background-image: url(./assests/jaguar.png);
+  background-image: url(./assests/flowers.png);
+}
+
+.homeBanner8 {
+  background-image: url(./assests/Burgers.png);
 }
 
 .box {
@@ -148,8 +155,11 @@ h2 {
   text-align: center;
   position: relative;
   color: aliceblue;
-  font-size: 30px;
-  margin-bottom: 2em;
+  background-color: black;
+  padding: .3em;
+  font-size: 28px;
+  font-family: 'Londrina Solid', sans-serif;
+  margin-bottom: 9em;
 }
 
 .meherdevs:hover {
@@ -164,9 +174,13 @@ h2 {
   background-color: greenyellow;
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 760px) {
 
-.donate {
+  .lilBox {
+    flex-wrap: nowrap;
+  }
+
+  .donate {
     position: fixed;
     right: 10px;
     bottom: 40px;
@@ -184,13 +198,16 @@ h2 {
     right: 20px;
     bottom: 120px;
     z-index: 1;
-  }  
+  }
 
-  .homeBanner2,
-  .homeBanner3,
-  .homeBanner4 {
-    min-height: 100%;
+  .hb {
+    min-height: 500px;
+    padding-bottom: 12em;
 
+  }
+
+  .hb h1 {
+    font-size: 40px;
   }
 
   h2 {
@@ -199,7 +216,7 @@ h2 {
   }
 
   .about {
-    padding-top: 0;
+    font-size: 23px;
   }
 
 }
