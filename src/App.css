@@ -21,7 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 .homeBanner1 {
@@ -42,36 +42,15 @@ h1 {
   text-align: center;
 }
 
-.donate {
-  position: fixed;
-  right: 30px;
-  bottom: 120px;
-  z-index: 1;
-}
-
-.donate-button {
-  padding: 1em;
-  background-color: white;
-  font-family: 'Bakbak One', sans-serif;
-  font-size: 18px;
-  color: black;
-  border: none;
-  box-shadow: -4px 5px black;
-  transition: .7s;
-  z-index: 1;
-  margin-right: 20px;
-
-}
-
 .toTop {
   position: fixed;
-  right: 50px;
-  bottom: 200px;
+  right: 40px;
+  bottom: 140px;
   z-index: 1;
 }
 
 .toTop-button {
-  padding: .3em;
+  padding: .7em;
   background-color: hotpink;
   font-family: 'Bakbak One', sans-serif;
   color: black;
@@ -79,6 +58,27 @@ h1 {
   box-shadow: -4px 5px black;
   transition: .5s ease-in-out;
   z-index: 1;
+}
+
+.donate {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  z-index: 1;
+}
+
+.donate-button {
+  padding: .7em;
+  background-color: white;
+  font-family: 'Bakbak One', sans-serif;
+  font-size: 28px;
+  color: black;
+  border: none;
+  box-shadow: -4px 5px black;
+  transition: .7s;
+  z-index: 1;
+  margin-right: 20px;
+
 }
 
 h2 {
@@ -97,6 +97,7 @@ h2 {
   color: black;
   text-align: left;
   padding: 30px;
+  max-width: 400px;
 }
 
 .player {
@@ -163,7 +164,7 @@ h2 {
 }
 
 .meherdevs:hover {
-  color: hotpink;
+  color: greenyellow;
 }
 
 .toTop-button:hover {
@@ -175,10 +176,6 @@ h2 {
 }
 
 @media only screen and (max-width: 760px) {
-
-  .lilBox {
-    flex-wrap: nowrap;
-  }
 
   .donate {
     position: fixed;

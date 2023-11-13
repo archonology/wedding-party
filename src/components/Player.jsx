@@ -85,7 +85,7 @@ export default function Player() {
       </Box>
       <CardMedia
         component="img"
-        sx={{ width: 400 }}
+        sx={{ maxWidth: 400 }}
         image={album}
         alt="Live from space album cover"
       />
