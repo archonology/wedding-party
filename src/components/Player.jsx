@@ -11,7 +11,7 @@ import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
-import album from "../assests/album.png";
+import album from "../assests/champagnestars.jpeg";
 import dju from "../assests/dju.mp3";
 
 const useAudio = () => {

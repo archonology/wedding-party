@@ -1,24 +1,120 @@
-import React, { useState } from "react";
-import Player from "../components/Player";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import * as React from "react";
+import { useEffect, useState } from "react";
+import { useTheme } from "@mui/material/styles";
+import cheers from "../assests/champagnelights1-6.jpeg";
+import sparkle from "../assests/champagnelights1-2.jpeg";
+import champagne from "../assests/champagnelights1-11.jpeg";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import PauseIcon from "@mui/icons-material/Pause";
+
+const useAudio = () => {
+  const [audio] = useState(new Audio());
+  const [playing, setPlaying] = useState(false);
+
+  const toggle = () => setPlaying(!playing);
+
+  useEffect(() => {
+    playing ? audio.play() : audio.pause();
+    audio.loop = true;
+  }, [playing]);
+
+  return [playing, toggle];
+};
+
 const Home = () => {
-  // const [visibility, setVisibility] = useState({ display: "none" });
-  // function showButton() {
-  //   setVisibility({ display: "block" });
-  // }
+  const theme = useTheme();
+  const [playing, toggle] = useAudio();
+
   return (
     <>
-      <div className="box">
-        <div className="lilBox">
-          <div className="hb homeBanner1">
-            <h1>Heidi & Reed's Post Wedding Party</h1>
-            <p className="about">
+      <div
+        className="banner"
+        style={{
+          backgroundImage: `url(${champagne})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          width: "100vw",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "right",
+          alignItems: "center",
+          flexWrap: "wrap",
+          marginTop: "10em",
+        }}
+      >
+        <div
+          className="textBox"
+          style={{
+            maxWidth: "600px",
+            height: "auto",
+            color: "white",
+            padding: "1.5em",
+            paddingTop: ".3em",
+            backgroundColor: "#0d0806ba",
+            textAlign: "left",
+            // marginBottom: "30em",
+          }}
+        >
+          <p
+            style={{
+              fontSize: "20px",
+            }}
+          >
+            YOU AND YOUR FAMILY ARE INVITED
+          </p>
+          <h1
+            style={{
+              fontSize: "54px",
+              fontWeight: "700",
+              paddingRight: "1.1em",
+              lineHeight: "1.4",
+            }}
+          >
+            Heidi & Reed's
+            <br />
+            Post-Wedding Party
+          </h1>
+          <p
+            className="about"
+            style={{
+              textAlign: "left",
+              padding: ".3em 1em 1em 1em",
+            }}
+          >
+            On 12/31/23, Heidi & Reed were married in their home with a small
+            ceremony surrounded by their three daugthers and parents. They
+            wanted a winter wedding by the fireplace, but wanted a big, cozy
+            chamapagne and October wedding party in Heidi's home town of Hoyt
+            Lakes, MN.
+            <br />
+            <hr />
+            Click the button for more details!
+          </p>
+          <button className="proceed-btn">Details</button>
+        </div>
+        {/* <img src={cheers} alt="cheers with champagne" hero /> */}
+        {/* <img src={sparkle} alt="champagne and sparklers" hero />
+            <img src={champagnelight1} alt="champagne and stars" hero /> */}
+
+        {/* <p className="about">
               Heidi and Reed got married! Now it's time to party. Press play on
               the song below and scroll to get the details!
             </p>
-            <Player />
-          </div>
-          <div className="hb homeBanner2">
+            <Player /> */}
+      </div>
+      {/* <div
+        className="banner"
+        style={{
+          backgroundImage: `url(${sparkle})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          width: "100vw",
+          height: "100vh",
+        }}
+      ></div> */}
+      {/* <div className="hb homeBanner2">
             <h2>Where?</h2>
             <p className="about">
               Hoyt Lakes Community Center,
@@ -85,9 +181,8 @@ const Home = () => {
               Grilled foods, drinks, and treats provided! If you'd like to bring
               a dish, drink, or treat, please coordinate with Reed or Heidi.
             </p>
-          </div>
-        </div>
-      </div>
+          </div> */}
+
       <div className="toTop">
         <button
           className="toTop-button"
@@ -96,7 +191,7 @@ const Home = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <KeyboardArrowUpIcon fontSize="large" />
+          <PlayArrowIcon sx={{ height: 30, width: 30 }} />
         </button>
       </div>
     </>

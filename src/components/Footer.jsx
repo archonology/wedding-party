@@ -1,21 +1,22 @@
 import * as React from "react";
 
-
 const Footer = () => {
-    return (
-        <>
-            <div className="box">
+  return (
+    <>
+      <div
+        className="footer"
+      >
         <a
           href="https://www.meherdevs.com"
           target={"_blank"}
           rel={"nonreferrer"}
           className="meherdevs"
         >
-          Made by MeherDevs | 2023
-                </a>
-            </div>
-      </>
-    );
-}
+          <p>Made by MeherDevs | 2023</p>
+        </a>
+      </div>
+    </>
+  );
+};
 
 export default Footer;
