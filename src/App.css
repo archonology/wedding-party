@@ -79,8 +79,8 @@ body {
 
 footer {
   /* position: fixed; */
-  height: 20px;
-  background-color: black;
+  /* height: 15px; */
+ 
 }
 
 .meherdevs {
@@ -97,7 +97,7 @@ footer {
 
 
 .meherdevs:hover {
-  color: #5d7b64;
+  color: #f6b94f;
 }
 
 .toTop-button:hover {
@@ -109,7 +109,7 @@ footer {
 }
 
 .proceed-btn:hover {
-  background-color: rgb(246, 185, 79);
+  background-color: #f6b94f;
 }
 
 @media only screen and (max-width: 760px) {}
