@@ -1,10 +1,11 @@
 import * as React from "react";
 
-
 const Footer = () => {
-    return (
-        <>
-            <div className="footer">
+  return (
+    <>
+      <div
+        className="footer"
+      >
         <a
           href="https://www.meherdevs.com"
           target={"_blank"}
@@ -12,10 +13,10 @@ const Footer = () => {
           className="meherdevs"
         >
           <p>Made by MeherDevs | 2023</p>
-                </a>
-            </div>
-      </>
-    );
-}
+        </a>
+      </div>
+    </>
+  );
+};
 
 export default Footer;

@@ -37,11 +37,11 @@ const Header = () => {
               {(popupState) => (
                 <React.Fragment>
                   <Button
-                    color="warning"
+                    // color="warning"
                     {...bindTrigger(popupState)}
-                    style={{ fontSize: "18px" }}
+                    style={{ fontSize: "18px", color: 'white' }}
                   >
-                    More
+                    Info
                   </Button>
                   <Menu {...bindMenu(popupState)}>
                     {/* <MenuItem onClick={popupState.close}>

@@ -14,11 +14,12 @@ body {
   height: 500px;
   color: white;
   padding: 1em;
-  background-color: #00000092;
+  background-color: #0d0806ba;
   z-index: 1;
   position: absolute;
   /* align-items: ; */
 }
+
 
 
 /* .toTop {
@@ -85,7 +86,7 @@ footer {
 
 
 .meherdevs:hover {
-  color: rgb(244, 148, 64);
+  color: #5d7b64;
 }
 
 /* .toTop-button:hover {
@@ -93,7 +94,7 @@ footer {
 } */
 
 .donate-button:hover {
-  background-color: rgb(59, 108, 55);
+  background-color: #3c5241;
 }
 
 @media only screen and (max-width: 760px) {}

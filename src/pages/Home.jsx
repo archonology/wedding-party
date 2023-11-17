@@ -11,7 +11,7 @@ const Home = () => {
       <div
         className="banner"
         style={{
-          backgroundImage: `url(${sparkle})`,
+          backgroundImage: `url(${cheers})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -30,22 +30,42 @@ const Home = () => {
             maxWidth: "600px",
             height: "auto",
             color: "white",
-            padding: "1em",
+            padding: "1.5em",
             paddingTop: ".3em",
-            backgroundColor: "#00000092",
-            textAlign: "center",
+            backgroundColor: "#0d0806ba",
+            textAlign: "left",
             // marginBottom: "30em",
           }}
         >
-          <h1
+          <p
             style={{
-              fontSize: "29px",
-              fontWeight: "400",
-              paddingRight: "1.1em",
+              fontSize: "20px",
             }}
           >
-            Heidi & Reed's Post Wedding Party
+            YOU AND YOUR FAMILY ARE INVITED
+          </p>
+          <h1
+            style={{
+              fontSize: "54px",
+              fontWeight: "700",
+              paddingRight: "1.1em",
+              lineHeight: "1.4",
+            }}
+          >
+            Heidi & Reed's
+            <br />
+            Post-Wedding Party
           </h1>
+          <p
+            className="about"
+            style={{
+              textAlign: "left",
+              padding: ".3em 1em 1em 1em",
+            }}
+          >
+            Heidi and Reed got married! Now it's time to party. Press play on
+            the song below and scroll to get the details!
+          </p>
         </div>
         {/* <img src={cheers} alt="cheers with champagne" hero /> */}
         {/* <img src={sparkle} alt="champagne and sparklers" hero />

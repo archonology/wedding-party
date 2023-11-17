@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
