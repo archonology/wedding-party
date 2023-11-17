@@ -1,11 +1,9 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { useTheme } from "@mui/material/styles";
-import Player from "../components/Player";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import champagnelight1 from "../assests/champagnelights1.png";
 import cheers from "../assests/champagnelights1-6.jpeg";
 import sparkle from "../assests/champagnelights1-2.jpeg";
+import champagne from "../assests/champagnelights1-11.jpeg";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 
@@ -32,17 +30,17 @@ const Home = () => {
       <div
         className="banner"
         style={{
-          backgroundImage: `url(${cheers})`,
+          backgroundImage: `url(${champagne})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           width: "100vw",
-          height: "110vh",
+          height: "100vh",
           display: "flex",
           justifyContent: "right",
           alignItems: "center",
           flexWrap: "wrap",
-          marginTop: "2em",
+          marginTop: "10em",
         }}
       >
         <div

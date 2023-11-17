@@ -30,7 +30,7 @@ const Header = () => {
               padding: ".3em",
             }}
           >
-            Heidi & Reed
+            Heidi & Reed | 2024
           </Typography>
           <Box>
             <PopupState variant="popover" popupId="demo-popup-menu">
