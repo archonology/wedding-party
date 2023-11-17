@@ -1,11 +1,32 @@
-import React, { useState } from "react";
+import * as React from "react";
+import { useEffect, useState } from "react";
+import { useTheme } from "@mui/material/styles";
 import Player from "../components/Player";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import champagnelight1 from "../assests/champagnelights1.png";
 import cheers from "../assests/champagnelights1-6.jpeg";
 import sparkle from "../assests/champagnelights1-2.jpeg";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import PauseIcon from "@mui/icons-material/Pause";
+
+const useAudio = () => {
+  const [audio] = useState(new Audio());
+  const [playing, setPlaying] = useState(false);
+
+  const toggle = () => setPlaying(!playing);
+
+  useEffect(() => {
+    playing ? audio.play() : audio.pause();
+    audio.loop = true;
+  }, [playing]);
+
+  return [playing, toggle];
+};
 
 const Home = () => {
+  const theme = useTheme();
+  const [playing, toggle] = useAudio();
+
   return (
     <>
       <div
@@ -21,7 +42,7 @@ const Home = () => {
           justifyContent: "right",
           alignItems: "center",
           flexWrap: "wrap",
-          marginTop: "15em",
+          marginTop: "2em",
         }}
       >
         <div
@@ -63,9 +84,16 @@ const Home = () => {
               padding: ".3em 1em 1em 1em",
             }}
           >
-            Heidi and Reed got married! Now it's time to party. Press play on
-            the song below and scroll to get the details!
+            On 12/31/23, Heidi & Reed were married in their home with a small
+            ceremony surrounded by their three daugthers and parents. They
+            wanted a winter wedding by the fireplace, but wanted a big, cozy
+            chamapagne and October wedding party in Heidi's home town of Hoyt
+            Lakes, MN.
+            <br />
+            <hr />
+            Click the button for more details!
           </p>
+          <button className="proceed-btn">Details</button>
         </div>
         {/* <img src={cheers} alt="cheers with champagne" hero /> */}
         {/* <img src={sparkle} alt="champagne and sparklers" hero />
@@ -157,7 +185,7 @@ const Home = () => {
             </p>
           </div> */}
 
-      {/* <div className="toTop">
+      <div className="toTop">
         <button
           className="toTop-button"
           onClick={(e) => {
@@ -165,9 +193,9 @@ const Home = () => {
             window.scrollTo(0, 0);
           }}
         >
-          To Top
+          <PlayArrowIcon sx={{ height: 30, width: 30 }} />
         </button>
-      </div> */}
+      </div>
     </>
   );
 };
