@@ -13,7 +13,10 @@ import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 const Header = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="relative" style={{  }}>
+      <AppBar
+        position="fixed"
+        style={{ width: "100%", backgroundColor: "black" }}
+      >
         <Toolbar>
           <Typography
             variant="h1"
@@ -22,10 +25,9 @@ const Header = () => {
             sx={{
               flexGrow: 1,
               flexShrink: 3,
-              fontFamily: "'Londrina Solid', sans-serif;, sans-serif;",
-              fontSize: "47px",
+              fontSize: "27px",
               color: "white",
-              padding: '.3em'
+              padding: ".3em",
             }}
           >
             Heidi & Reed
@@ -35,9 +37,9 @@ const Header = () => {
               {(popupState) => (
                 <React.Fragment>
                   <Button
-                    color="secondary"
+                    color="warning"
                     {...bindTrigger(popupState)}
-                    style={{ fontSize: "28px", fontFamily: "barriecito" }}
+                    style={{ fontSize: "18px" }}
                   >
                     More
                   </Button>
@@ -67,12 +69,10 @@ const Header = () => {
                         rel="nonrefferer"
                       >
                         <Typography
-                          color="secondary"
+                          color="orange"
                           style={{
-                            fontFamily: "barriecito",
-                            fontSize: "40px",
-                            fontWeight: "700",
-                            marginRight: "5px",
+                            fontSize: "20px",
+                            fontWeight: "500",
                           }}
                         >
                           Directions
@@ -82,12 +82,10 @@ const Header = () => {
                     <MenuItem onClick={popupState.close}>
                       <a href="https://buy.stripe.com/3csbIR2S89s03oA002">
                         <Typography
-                          color="secondary"
+                          color="orange"
                           style={{
-                            fontFamily: "barriecito",
-                            fontSize: "40px",
-                            fontWeight: "700",
-                            marginLeft: "5px",
+                            fontSize: "20px",
+                            fontWeight: "500",
                           }}
                         >
                           Give a Gift

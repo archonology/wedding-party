@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Player from "../components/Player";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import champagnelight1 from "../assests/champagnelights1.png"
+
 const Home = () => {
   // const [visibility, setVisibility] = useState({ display: "none" });
   // function showButton() {
@@ -11,14 +13,15 @@ const Home = () => {
       <div className="box">
         <div className="lilBox">
           <div className="hb homeBanner1">
-            <h1>Heidi & Reed's Post Wedding Party</h1>
-            <p className="about">
+            <img src={champagnelight1} alt="champagne" hero />
+            {/* <h1>Heidi & Reed's Post Wedding Party</h1> */}
+            {/* <p className="about">
               Heidi and Reed got married! Now it's time to party. Press play on
               the song below and scroll to get the details!
             </p>
-            <Player />
+            <Player /> */}
           </div>
-          <div className="hb homeBanner2">
+          {/* <div className="hb homeBanner2">
             <h2>Where?</h2>
             <p className="about">
               Hoyt Lakes Community Center,
@@ -85,7 +88,7 @@ const Home = () => {
               Grilled foods, drinks, and treats provided! If you'd like to bring
               a dish, drink, or treat, please coordinate with Reed or Heidi.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="toTop">
