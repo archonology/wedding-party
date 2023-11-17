@@ -82,7 +82,7 @@ const Home = () => {
           <div className="hb homeBanner8">
             <h2>Eats?</h2>
             <p className="about">
-              Grilled foods, drinks, and treats provided!If you'd like to bring
+              Grilled foods, drinks, and treats provided! If you'd like to bring
               a dish, drink, or treat, please coordinate with Reed or Heidi.
             </p>
           </div>
