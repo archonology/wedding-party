@@ -1,68 +1,44 @@
-html {
+html,
+body {
+  height: 100%;
+  margin: 0;
   scroll-behavior: smooth;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  /* background-image: url(./assests/90sUni.png); */
-  /* background-size: auto; */
+.banner {
+  z-index: 0;
 }
 
-/* .box {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-} */
-
-/* .lilBox {
-  width: 100%;
-  margin: 0;
-} */
-
-.hb {
-  background-size: cover;
-  /* min-width: 100%;
-  min-height: 1200px; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+.testBox {
+  width: 500px;
+  height: 500px;
+  color: white;
+  padding: 1em;
+  background-color: #00000092;
+  z-index: 1;
+  position: absolute;
+  /* align-items: ; */
 }
 
-.homeBanner1 img {
-  width: 100%;
-}
 
-h1 {
-  color: rgb(254, 252, 252);
-  padding: .3em;
-  font-size: 28px;
-  flex: 1 0 100%;
-  font-family: 'Londrina Solid', sans-serif;
-  background-color: rgba(7, 7, 7, 0.674);
-  text-align: center;
-}
-
-.toTop {
+/* .toTop {
   position: fixed;
-  right: 40px;
-  bottom: 140px;
+  right: 20px;
+  bottom: 115px;
   z-index: 1;
 }
 
 .toTop-button {
-  padding: .7em;
-  background-color: hotpink;
-  font-family: 'Bakbak One', sans-serif;
-  color: black;
+  padding: .7em 1.5em .7em 1.5em;
+  background-color: rgb(55, 55, 55);
+  font-size: 20px;
+  color: rgb(254, 243, 243);
   border: none;
-  box-shadow: -4px 5px black;
-  transition: .5s ease-in-out;
+  box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742);
+  transition: .7s;
   z-index: 1;
-}
+  margin-right: 20px;
+} */
 
 .donate {
   position: fixed;
@@ -72,99 +48,33 @@ h1 {
 }
 
 .donate-button {
-  padding: .7em;
-  background-color: white;
-  font-family: 'Bakbak One', sans-serif;
-  font-size: 28px;
-  color: black;
+  padding: .7em 2em .7em 2em;
+  background-color: rgb(28, 28, 28);
+  font-size: 20px;
+  color: rgb(254, 243, 243);
   border: none;
-  box-shadow: -4px 5px black;
+  box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742);
   transition: .7s;
   z-index: 1;
   margin-right: 20px;
 
 }
 
-h2 {
-  color: honeydew;
-  padding: .3em;
-  font-size: 78px;
-  font-family: 'Bakbak One', sans-serif;
-  background-color: rgb(10, 10, 11);
-  text-align: center;
-}
-
-.homeBanner1 .about {
-  max-width: 900px;
-}
-
-.about {
-  font-family: 'Bakbak One', sans-serif;
-  font-size: 33px;
-  background-color: ivory;
-  color: black;
-  text-align: left;
-  padding: 30px;
-  max-width: 400px;
-}
-
 .player {
   margin-bottom: 10em;
 }
 
-/* .homeBanner2 {
-  background-image: url(./assests/fulljag.png);
-}
-
-.homeBanner3 {
-  background-image: url(./assests/klee.png);
-}
-
-.homeBanner4 {
-  background-image: url(./assests/temporal.png);
-}
-
-.homeBanner5 {
-  background-image: url(./assests/lisaf.png);
-} */
-
-
-.homeBanner3 .about {
-  font-size: 42px;
-  text-align: center;
-}
-
-.homeBanner5 .about {
-  max-width: 500px;
-  margin-top: 3em;
-}
-
-.homeBanner5 .about span {
-  color: rgb(150, 14, 168);
-}
-
-/* .homeBanner6 {
-  background-image: url(./assests/90sjag.png);
-}
-
-.homeBanner7 {
-  background-image: url(./assests/flowers.png);
-}
-
-.homeBanner8 {
-  background-image: url(./assests/Burgers.png);
-} */
 
 footer {
-  position: fixed;
-  width: 100%;
+  /* position: fixed; */
   height: 20px;
   background-color: black;
 }
 
 .meherdevs {
-  color: rgb(255, 251, 240);
+  color: rgb(231, 227, 220);
   text-align: center;
+  transition: 1s ease-in-out;
 }
 
 .meherdevs p {
@@ -175,56 +85,15 @@ footer {
 
 
 .meherdevs:hover {
-  color: greenyellow;
+  color: rgb(244, 148, 64);
 }
 
-.toTop-button:hover {
-  background-color: gold;
-}
+/* .toTop-button:hover {
+  background-color: rgb(170, 95, 140);
+} */
 
 .donate-button:hover {
-  background-color: greenyellow;
+  background-color: rgb(59, 108, 55);
 }
 
-@media only screen and (max-width: 760px) {
-
-  .donate {
-    position: fixed;
-    right: 10px;
-    bottom: 15px;
-    z-index: 1;
-  }
-
-  .donate-button {
-    padding: .7em;
-    margin-right: 10px;
-
-  }
-
-  .toTop {
-    position: fixed;
-    right: 20px;
-    bottom: 120px;
-    z-index: 1;
-  }
-
-  .hb {
-    min-height: 500px;
-    padding-bottom: 12em;
-
-  }
-
-  .hb h1 {
-    font-size: 40px;
-  }
-
-  h2 {
-    font-size: 40px;
-    margin-bottom: 0;
-  }
-
-  .about {
-    font-size: 23px;
-  }
-
-}
+@media only screen and (max-width: 760px) {}

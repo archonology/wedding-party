@@ -1,27 +1,74 @@
 import React, { useState } from "react";
 import Player from "../components/Player";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import champagnelight1 from "../assests/champagnelights1.png"
+import champagnelight1 from "../assests/champagnelights1.png";
+import cheers from "../assests/champagnelights1-6.jpeg";
+import sparkle from "../assests/champagnelights1-2.jpeg";
 
 const Home = () => {
-  // const [visibility, setVisibility] = useState({ display: "none" });
-  // function showButton() {
-  //   setVisibility({ display: "block" });
-  // }
   return (
     <>
-      <div className="box">
-        <div className="lilBox">
-          <div className="hb homeBanner1">
-            <img src={champagnelight1} alt="champagne" hero />
-            {/* <h1>Heidi & Reed's Post Wedding Party</h1> */}
-            {/* <p className="about">
+      <div
+        className="banner"
+        style={{
+          backgroundImage: `url(${sparkle})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          width: "100vw",
+          height: "110vh",
+          display: "flex",
+          justifyContent: "right",
+          alignItems: "center",
+          flexWrap: "wrap",
+          marginTop: "15em",
+        }}
+      >
+        <div
+          className="textBox"
+          style={{
+            maxWidth: "600px",
+            height: "auto",
+            color: "white",
+            padding: "1em",
+            paddingTop: ".3em",
+            backgroundColor: "#00000092",
+            textAlign: "center",
+            // marginBottom: "30em",
+          }}
+        >
+          <h1
+            style={{
+              fontSize: "29px",
+              fontWeight: "400",
+              paddingRight: "1.1em",
+            }}
+          >
+            Heidi & Reed's Post Wedding Party
+          </h1>
+        </div>
+        {/* <img src={cheers} alt="cheers with champagne" hero /> */}
+        {/* <img src={sparkle} alt="champagne and sparklers" hero />
+            <img src={champagnelight1} alt="champagne and stars" hero /> */}
+
+        {/* <p className="about">
               Heidi and Reed got married! Now it's time to party. Press play on
               the song below and scroll to get the details!
             </p>
             <Player /> */}
-          </div>
-          {/* <div className="hb homeBanner2">
+      </div>
+      {/* <div
+        className="banner"
+        style={{
+          backgroundImage: `url(${sparkle})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          width: "100vw",
+          height: "100vh",
+        }}
+      ></div> */}
+      {/* <div className="hb homeBanner2">
             <h2>Where?</h2>
             <p className="about">
               Hoyt Lakes Community Center,
@@ -89,9 +136,8 @@ const Home = () => {
               a dish, drink, or treat, please coordinate with Reed or Heidi.
             </p>
           </div> */}
-        </div>
-      </div>
-      <div className="toTop">
+
+      {/* <div className="toTop">
         <button
           className="toTop-button"
           onClick={(e) => {
@@ -99,9 +145,9 @@ const Home = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <KeyboardArrowUpIcon fontSize="large" />
+          To Top
         </button>
-      </div>
+      </div> */}
     </>
   );
 };

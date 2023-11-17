@@ -69,7 +69,7 @@ const Header = () => {
                         rel="nonrefferer"
                       >
                         <Typography
-                          color="orange"
+                          color="white"
                           style={{
                             fontSize: "20px",
                             fontWeight: "500",
@@ -82,7 +82,7 @@ const Header = () => {
                     <MenuItem onClick={popupState.close}>
                       <a href="https://buy.stripe.com/3csbIR2S89s03oA002">
                         <Typography
-                          color="orange"
+                          color="white"
                           style={{
                             fontSize: "20px",
                             fontWeight: "500",
