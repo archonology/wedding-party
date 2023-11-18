@@ -22,14 +22,14 @@ body {
 
 
 
-.toTop {
+.playBox {
   position: fixed;
   right: 20px;
   bottom: 93px;
   z-index: 1;
 }
 
-.toTop-button {
+.play-button {
   padding: .3em 2.2em .3em 2.2em;
   background-color: rgb(55, 55, 55);
   font-size: 20px;
@@ -77,12 +77,6 @@ body {
 }
 
 
-footer {
-  /* position: fixed; */
-  /* height: 15px; */
- 
-}
-
 .meherdevs {
   color: rgb(231, 227, 220);
   text-align: center;
@@ -97,10 +91,10 @@ footer {
 
 
 .meherdevs:hover {
-  color: #f6b94f;
+  color: #eebdf9;
 }
 
-.toTop-button:hover {
+.play-button:hover {
   background-color: rgb(170, 95, 140);
 }
 
@@ -109,7 +103,7 @@ footer {
 }
 
 .proceed-btn:hover {
-  background-color: #f6b94f;
+  background-color: #eebdf9;
 }
 
 @media only screen and (max-width: 760px) {}
