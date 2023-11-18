@@ -88,7 +88,7 @@ const Header = () => {
                             fontWeight: "500",
                           }}
                         >
-                          Give a Gift
+                          C.R.E.A.M.
                         </Typography>
                       </a>
                     </MenuItem>

@@ -54,7 +54,7 @@ const InfoBox = () => {
             <div
               className="textBox"
               style={{
-                maxWidth: "550px",
+                maxWidth: "650px",
                 minWidth: "395px",
                 height: "auto",
                 color: "white",
