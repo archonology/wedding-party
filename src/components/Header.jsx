@@ -75,7 +75,7 @@ const Header = () => {
                             fontWeight: "500",
                           }}
                         >
-                          Directions
+                          🗺️ Directions
                         </Typography>
                       </a>
                     </MenuItem>
@@ -88,7 +88,7 @@ const Header = () => {
                             fontWeight: "500",
                           }}
                         >
-                          C.R.E.A.M.
+                          💸 Gift Now
                         </Typography>
                       </a>
                     </MenuItem>
@@ -101,7 +101,7 @@ const Header = () => {
                           fontWeight: "500",
                         }}
                       >
-                        Call{" "}
+                        ☎️ Call{" "}
                         <span style={{ color: "#eebdf9" }}>218-225-3555</span>
                         <br />
                         to reserve a room
@@ -120,7 +120,7 @@ const Header = () => {
                             fontWeight: "500",
                           }}
                         >
-                          @ The Country Inn
+                          @ The Country Inn 🗺️ 🏨
                         </Typography>
                       </a>
                     </MenuItem>

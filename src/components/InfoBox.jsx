@@ -4,6 +4,12 @@ import { useEffect, useState } from "react";
 import cheers from "../assests/champagnelights1-6.jpeg";
 import sparkle from "../assests/champagnelights1-2.jpeg";
 import champagne from "../assests/champagnelights1-11.jpeg";
+import fallpagne from "../assests/fallpagne.jpeg";
+import nightpagne from "../assests/nightpagne.jpeg";
+import cozy from "../assests/cozy.jpeg";
+import gifts from "../assests/gifts.jpeg";
+import eats from "../assests/eats-15.jpeg";
+import beach from "../assests/beach.jpeg";
 import family1 from "../assests/family1-3.jpeg";
 import family2 from "../assests/family2-13.jpeg";
 import family4 from "../assests/family2-15.jpeg";
@@ -14,7 +20,16 @@ import info from "./Info";
 
 const InfoBox = () => {
   const [imageIndex, setIndex] = useState(0);
-  const imgArray = [champagne, sparkle, family1, family4, handr];
+  const imgArray = [
+    family1,
+    fallpagne,
+    cheers,
+    nightpagne,
+    cozy,
+    gifts,
+    eats,
+    beach,
+  ];
   const [textIndex, setTextIndex] = useState(0);
 
   const handleNext = function (e) {
