@@ -3,25 +3,7 @@ body {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
-  transition: 2s ease-in-out;
 }
-
-.banner {
-  z-index: 0;
-}
-
-.testBox {
-  width: 500px;
-  height: 500px;
-  color: white;
-  padding: 1em;
-  background-color: #0d0806ba;
-  z-index: 1;
-  position: absolute;
-  /* align-items: ; */
-}
-
-
 
 .playBox {
   position: fixed;
