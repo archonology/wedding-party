@@ -64,7 +64,6 @@ const InfoBox = () => {
               className="textBox"
               style={{
                 maxWidth: "650px",
-                minWidth: "395px",
                 height: "auto",
                 color: "white",
                 padding: "1.5em",

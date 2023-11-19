@@ -128,11 +128,6 @@ const Header = () => {
                 </React.Fragment>
               )}
             </PopupState>
-
-            {/* 
-            <p>|</p> */}
-
-            {/* <p>|</p> */}
           </Box>
         </Toolbar>
       </AppBar>

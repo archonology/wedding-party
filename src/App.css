@@ -3,6 +3,7 @@ body {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
+  transition: 2s ease-in-out;
 }
 
 .banner {
@@ -71,11 +72,6 @@ body {
   margin-left: 10px;
   margin-bottom: 10px;
 }
-
-.player {
-  margin-bottom: 10em;
-}
-
 
 .meherdevs {
   color: rgb(231, 227, 220);
