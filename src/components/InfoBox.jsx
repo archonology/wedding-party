@@ -101,7 +101,7 @@ const InfoBox = () => {
                 {info[textIndex].details}
                 <br />
                 <hr />
-                Click the button for more details!
+                Click below or INFO above for more details!
               </p>
               <button
                 className="proceed-btn"
