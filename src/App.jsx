@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -66,9 +67,15 @@ function App() {
         <Footer />
         <div className="moveText">
           <button className="move-button" onClick={() => handleBox()}>
-            <>
-              <ArrowForwardIosIcon sx={{ height: 30, width: 30 }} />
-            </>
+            {clicked ? (
+              <>
+                <ArrowBackIosIcon sx={{ height: 30, width: 30 }} />
+              </>
+            ) : (
+              <>
+                <ArrowForwardIosIcon sx={{ height: 30, width: 30 }} />
+              </>
+            )}
           </button>
         </div>
       </ThemeProvider>
