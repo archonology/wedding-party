@@ -39,7 +39,7 @@ const Header = () => {
                   <Button
                     // color="warning"
                     {...bindTrigger(popupState)}
-                    style={{ fontSize: "18px", color: 'white' }}
+                    style={{ fontSize: "18px", color: "white" }}
                   >
                     Info
                   </Button>
@@ -75,7 +75,7 @@ const Header = () => {
                             fontWeight: "500",
                           }}
                         >
-                          Directions
+                          🗺️ Directions
                         </Typography>
                       </a>
                     </MenuItem>
@@ -88,7 +88,39 @@ const Header = () => {
                             fontWeight: "500",
                           }}
                         >
-                          Give a Gift
+                          💸 Gift Now
+                        </Typography>
+                      </a>
+                    </MenuItem>
+                    <hr />
+                    <MenuItem>
+                      <Typography
+                        color="white"
+                        style={{
+                          fontSize: "20px",
+                          fontWeight: "500",
+                        }}
+                      >
+                        ☎️ Call{" "}
+                        <span style={{ color: "#eebdf9" }}>218-225-3555</span>
+                        <br />
+                        to reserve a room
+                      </Typography>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <a
+                        href="https://www.google.com/maps/place/Country+Inn+of+Hoyt+Lakes/@47.5190366,-92.1557368,17z/data=!3m1!4b1!4m9!3m8!1s0x52a57b68161e2467:0x39cdfe26c671c54!5m2!4m1!1i2!8m2!3d47.5190367!4d-92.1508659!16s%2Fg%2F1thmkmzv?entry=ttu"
+                        target="_blank"
+                        rel="nonrefferer"
+                      >
+                        <Typography
+                          color="white"
+                          style={{
+                            fontSize: "20px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          @ The Country Inn 🗺️ 🏨
                         </Typography>
                       </a>
                     </MenuItem>
@@ -96,11 +128,6 @@ const Header = () => {
                 </React.Fragment>
               )}
             </PopupState>
-
-            {/* 
-            <p>|</p> */}
-
-            {/* <p>|</p> */}
           </Box>
         </Toolbar>
       </AppBar>
