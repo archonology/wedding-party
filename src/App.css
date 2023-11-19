@@ -5,10 +5,29 @@ body {
   scroll-behavior: smooth;
 }
 
-.playBox {
-  position: fixed;
+.moveText {
+  position: absolute;
   right: 20px;
-  bottom: 93px;
+  bottom: 75px;
+  z-index: 1;
+}
+
+.move-button {
+  padding: .3em 2.2em .3em 2.2em;
+  background-color: rgb(55, 55, 55);
+  font-size: 20px;
+  color: #fef3f3;
+  border: none;
+  box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742);
+  transition: .7s;
+  z-index: 1;
+  margin-right: 20px;
+}
+
+.playBox {
+  position: absolute;
+  right: 20px;
+  bottom: 23px;
   z-index: 1;
 }
 
@@ -16,7 +35,7 @@ body {
   padding: .3em 2.2em .3em 2.2em;
   background-color: rgb(55, 55, 55);
   font-size: 20px;
-  color: rgb(254, 243, 243);
+  color: #fef3f3;
   border: none;
   box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742);
   transition: .7s;
@@ -25,9 +44,9 @@ body {
 }
 
 .donate {
-  position: fixed;
+  position: absolute;
   right: 20px;
-  bottom: 30px;
+  bottom: -35px;
   z-index: 1;
 }
 
@@ -70,6 +89,10 @@ body {
 
 .meherdevs:hover {
   color: #eebdf9;
+}
+
+.move-button:hover {
+  background-color: rgb(170, 95, 96);
 }
 
 .play-button:hover {

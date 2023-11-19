@@ -1,6 +1,5 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
 import cheers from "../assests/champagnelights1-6.jpeg";
 import fallpagne from "../assests/fallpagne.jpeg";
 import nightpagne from "../assests/nightpagne.jpeg";
@@ -10,10 +9,10 @@ import eats from "../assests/eats-15.jpeg";
 import party from "../assests/party.jpeg";
 import beach from "../assests/beach.jpeg";
 import family1 from "../assests/family1-3.jpeg";
-
 import info from "./Info";
 
-const InfoBox = () => {
+const InfoBox = ({ boxStyle }) => {
+  console.log(boxStyle);
   const [imageIndex, setIndex] = useState(0);
   const imgArray = [
     family1,
@@ -25,33 +24,8 @@ const InfoBox = () => {
     eats,
     beach,
   ];
-  const boxstyle1 = {
-    maxWidth: "580px",
-    height: "auto",
-    color: "white",
-    padding: "1.5em",
-    paddingTop: ".3em",
-    backgroundColor: "#0d0806ba",
-    textAlign: "left",
-    flexWrap: "wrap",
-    transition: "1s ease-in-out",
-  };
-
-  const boxstyle2 = {
-    width: "2vh",
-    height: "auto",
-    color: "white",
-    padding: "1.5em",
-    paddingTop: ".3em",
-    backgroundColor: "#0d0806ba",
-    textAlign: "left",
-    flexWrap: "wrap",
-    transition: "1s ease-in-out",
-  };
 
   const [textIndex, setTextIndex] = useState(0);
-  const [clicked, setClicked] = useState(false);
-  const [boxStyle, setBoxStyle] = useState(boxstyle1);
 
   const handleNext = function (e) {
     e.preventDefault();
@@ -66,16 +40,6 @@ const InfoBox = () => {
       setTextIndex(textIndex + 1);
     }
   };
-
-  function handleBox() {
-    if (clicked) {
-      setBoxStyle(boxstyle2);
-      setClicked(false);
-    } else {
-      setBoxStyle(boxstyle1);
-      setClicked(true);
-    }
-  }
 
   return (
     <>
@@ -98,11 +62,7 @@ const InfoBox = () => {
               transition: "1.5s ease-in-out",
             }}
           >
-            <div
-              className="textBox"
-              onClick={() => handleBox(boxStyle)}
-              style={boxStyle}
-            >
+            <div className="textBox" style={boxStyle}>
               <p
                 style={{
                   fontSize: "2.5vh",
