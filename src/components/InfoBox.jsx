@@ -57,13 +57,13 @@ const InfoBox = () => {
               alignItems: "center",
               flexWrap: "wrap",
               marginTop: "10em",
-              transition: "2s ease-in-out",
+              transition: "1.5s ease-in-out",
             }}
           >
             <div
               className="textBox"
               style={{
-                maxWidth: "650px",
+                maxWidth: "580px",
                 height: "auto",
                 color: "white",
                 padding: "1.5em",
@@ -76,14 +76,14 @@ const InfoBox = () => {
             >
               <p
                 style={{
-                  fontSize: "21px",
+                  fontSize: "2.5vh",
                 }}
               >
                 {info[textIndex].preheading}
               </p>
               <h1
                 style={{
-                  fontSize: "44px",
+                  fontSize: "3.5vh",
                   fontWeight: "700",
                   lineHeight: "1.4",
                 }}
@@ -95,7 +95,7 @@ const InfoBox = () => {
               <p
                 style={{
                   textAlign: "left",
-                  fontSize: "20px",
+                  fontSize: "2.1vh",
                 }}
               >
                 {info[textIndex].details}
@@ -103,7 +103,11 @@ const InfoBox = () => {
                 <hr />
                 Click the button for more details!
               </p>
-              <button className="proceed-btn" onClick={(e) => handleNext(e)}>
+              <button
+                className="proceed-btn"
+                style={{ fontSize: "2.1vh" }}
+                onClick={(e) => handleNext(e)}
+              >
                 {info[textIndex].btnText}
               </button>
             </div>

@@ -1,13 +1,13 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { useTheme } from "@mui/material/styles";
-
+import weddingTheme from "../assests/weddingTheme.mp3";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import InfoBox from "../components/InfoBox";
 
 const useAudio = () => {
-  const [audio] = useState(new Audio());
+  const [audio] = useState(new Audio(weddingTheme));
   const [playing, setPlaying] = useState(false);
 
   const toggle = () => setPlaying(!playing);
@@ -22,21 +22,23 @@ const useAudio = () => {
 
 const Home = () => {
   const theme = useTheme();
-  const [playing, toggle] = useAudio();
+  const [playing, toggle] = useAudio(weddingTheme);
 
   return (
     <>
       <InfoBox />
 
       <div className="playBox">
-        <button
-          className="play-button"
-          // onClick={() => {
-          //   // e.preventDefault();
-          //   // window.scrollTo(0, 0);
-          // }}
-        >
-          <PlayArrowIcon sx={{ height: 30, width: 30 }} />
+        <button className="play-button" onClick={toggle}>
+          {playing ? (
+            <>
+              <PauseIcon sx={{ height: 30, width: 30 }} />
+            </>
+          ) : (
+            <>
+              <PlayArrowIcon sx={{ height: 30, width: 30 }} />
+            </>
+          )}
         </button>
       </div>
     </>
