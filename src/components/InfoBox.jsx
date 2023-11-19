@@ -1,9 +1,7 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import cheers from "../assests/champagnelights1-6.jpeg";
-import sparkle from "../assests/champagnelights1-2.jpeg";
-import champagne from "../assests/champagnelights1-11.jpeg";
 import fallpagne from "../assests/fallpagne.jpeg";
 import nightpagne from "../assests/nightpagne.jpeg";
 import cozy from "../assests/cozy.jpeg";
@@ -11,10 +9,6 @@ import gifts from "../assests/gifts.jpeg";
 import eats from "../assests/eats-15.jpeg";
 import beach from "../assests/beach.jpeg";
 import family1 from "../assests/family1-3.jpeg";
-import family2 from "../assests/family2-13.jpeg";
-import family4 from "../assests/family2-15.jpeg";
-import family5 from "../assests/family2-16.jpeg";
-import handr from "../assests/handr-14.jpeg";
 
 import info from "./Info";
 
