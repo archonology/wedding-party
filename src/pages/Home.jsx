@@ -5,7 +5,6 @@ import weddingTheme from "../assests/weddingTheme.mp3";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import InfoBox from "../components/InfoBox";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const useAudio = () => {
   const [audio] = useState(new Audio(weddingTheme));
