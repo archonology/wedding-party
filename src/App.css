@@ -92,7 +92,7 @@ body {
 }
 
 .move-button:hover {
-  background-color: rgb(90, 83, 83);
+  background-color: rgb(126, 51, 51);
 }
 
 .play-button:hover {
@@ -109,17 +109,29 @@ body {
 
 @media only screen and (max-width: 560px) {
   .moveText {
-    right: 20px;
-    bottom: 7.5%;
+    right: 210px;
+    top: 8.5%;
+  }
+
+  .move-button {
+    padding: .3rem 1.5rem .3rem 1.5rem;
   }
 
   .playBox {
-    right: 20px;
-    bottom: .5%;
+    right: 120px;
+    top: 8.5%;
+  }
+
+  .play-button {
+    padding: .3rem 1.5rem .3rem 1.5rem;
   }
 
   .donate {
     right: 20px;
-    bottom: -7%;
+    top: 8.5%;
+  }
+
+  .donate-button {
+    padding: .7rem 1.5rem .7rem 1.5rem;
   }
 }

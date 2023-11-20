@@ -38,7 +38,7 @@ const info = [
     heading1: "CHAMPAGNE COZY",
     heading2: "",
     details:
-      "No dress code, but we recommend champagne cozy: whatever you like to wear when you're having champagne! Unless, as some have warned us, that something is nothing. Family event here, folks. 😬",
+      "No dress code, but we recommend champagne cozy: whatever you like to wear when you're having champagne -- or sparkling cider for the littles!",
     btnText: "What about Gifts?",
   },
   {
