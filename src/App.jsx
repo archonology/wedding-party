@@ -43,16 +43,16 @@ function App() {
 
   const handleBox = () => {
     if (clicked) {
-      setBoxStyle(boxstyle2);
+      setBoxStyle(boxstyle1);
       setClicked(false);
     } else {
-      setBoxStyle(boxstyle1);
+      setBoxStyle(boxstyle2);
       setClicked(true);
     }
   };
   return (
     <>
-      <ThemeProvider theme={darkTheme} boxStyle={boxStyle}>
+      <ThemeProvider theme={darkTheme}>
         <Header />
         <div className="donate">
           <a

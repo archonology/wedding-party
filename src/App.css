@@ -8,7 +8,7 @@ body {
 .moveText {
   position: absolute;
   right: 20px;
-  bottom: 19%;
+  bottom: 13.5%;
   z-index: 1;
 }
 
@@ -21,13 +21,13 @@ body {
   box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742);
   transition: .7s;
   z-index: 1;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 .playBox {
   position: absolute;
   right: 20px;
-  bottom: 12.5%;
+  bottom: 7%;
   z-index: 1;
 }
 
@@ -40,13 +40,13 @@ body {
   box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742);
   transition: .7s;
   z-index: 1;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 .donate {
   position: absolute;
   right: 20px;
-  bottom: 5.5%;
+  bottom: 0%;
   z-index: 1;
 }
 
@@ -59,7 +59,7 @@ body {
   box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742);
   transition: .7s;
   z-index: 1;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 .proceed-btn {
