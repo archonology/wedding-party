@@ -12,9 +12,10 @@ import family1 from "../assests/family1-3.jpeg";
 import info from "./Info";
 
 const InfoBox = ({ boxStyle }) => {
-  console.log(boxStyle);
+  const breakpoint = 560;
   const [imageIndex, setIndex] = useState(0);
-  const imgArray = [
+
+  let imgArray = [
     family1,
     fallpagne,
     cozy,
@@ -24,6 +25,20 @@ const InfoBox = ({ boxStyle }) => {
     eats,
     beach,
   ];
+  if (window.innerWidth < breakpoint) {
+    imgArray = [beach, fallpagne, cozy, nightpagne, party, gifts, eats, beach];
+  } else {
+    imgArray = [
+      family1,
+      fallpagne,
+      cozy,
+      nightpagne,
+      party,
+      gifts,
+      eats,
+      beach,
+    ];
+  }
 
   const [textIndex, setTextIndex] = useState(0);
 
