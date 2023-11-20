@@ -10,9 +10,17 @@ import party from "../assests/party.jpeg";
 import beach from "../assests/beach.jpeg";
 import family1 from "../assests/family1-3.jpeg";
 import info from "./Info";
+import snow from "../assests/snow.jpeg";
+import trampo from "../assests/trampo.jpg";
+import alma from "../assests/alma.jpg";
+import hr from "../assests/hr.jpg";
+import smfall from "../assests/smfall.jpg";
+import smchamp from "../assests/smchamp.jpg";
+import smgifts from "../assests/smgifts.jpg";
+import smcake from "../assests/smcake.jpg";
 
 const InfoBox = ({ boxStyle }) => {
-  const breakpoint = 560;
+  const breakpoint = 570;
   const [imageIndex, setIndex] = useState(0);
 
   let imgArray = [
@@ -26,7 +34,7 @@ const InfoBox = ({ boxStyle }) => {
     beach,
   ];
   if (window.innerWidth < breakpoint) {
-    imgArray = [beach, fallpagne, cozy, nightpagne, party, gifts, eats, beach];
+    imgArray = [hr, smfall, trampo, smchamp, alma, smgifts, smcake, snow];
   } else {
     imgArray = [
       family1,

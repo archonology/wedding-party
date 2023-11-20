@@ -7,8 +7,8 @@ body {
 
 .moveText {
   position: absolute;
-  right: 20px;
-  bottom: 13.5%;
+  right: 275px;
+  top: 9.8%;
   z-index: 1;
 }
 
@@ -26,13 +26,13 @@ body {
 
 .playBox {
   position: absolute;
-  right: 20px;
-  bottom: 7%;
+  right: 147px;
+  top: 9.8%;
   z-index: 1;
 }
 
 .play-button {
-  padding: .3em 2.2em .3em 2.2em;
+  padding: .3em 2.3em .3em 2.3em;
   background-color: rgb(55, 55, 55);
   font-size: 20px;
   color: #fef3f3;
@@ -46,7 +46,7 @@ body {
 .donate {
   position: absolute;
   right: 20px;
-  bottom: 0%;
+  top: 9.5%;
   z-index: 1;
 }
 

@@ -23,20 +23,23 @@ function App() {
     textAlign: "left",
     flexWrap: "wrap",
     zIndex: 0,
-    transition: "1.5s ease-in-out",
+    transition: ".3s ease-in-out",
   };
 
   const boxstyle2 = {
-    width: "10px",
+    // width: "2px",
+    color: "black",
+    maxWidth: "10px",
+    float: "right",
+    marginLeft: "100%",
     height: "auto",
-    color: "#0d0806ba",
-    padding: "1.5em",
-    paddingTop: ".3em",
+    padding: "0em",
+    paddingTop: "-.5em",
     backgroundColor: "black",
     textAlign: "left",
-    flexWrap: "wrap",
+    flexWrap: "no-wrap",
     zIndex: 0,
-    transition: "1.5s ease-in-out",
+    transition: ".3s ease-in-out",
   };
   const [clicked, setClicked] = useState(false);
   const [boxStyle, setBoxStyle] = useState(boxstyle1);
