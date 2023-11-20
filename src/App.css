@@ -110,7 +110,7 @@ body {
 @media only screen and (max-width: 560px) {
   .moveText {
     right: 210px;
-    top: 8.5%;
+    top: 9.5%;
   }
 
   .move-button {
@@ -119,7 +119,7 @@ body {
 
   .playBox {
     right: 120px;
-    top: 8.5%;
+    top: 9.5%;
   }
 
   .play-button {
@@ -128,10 +128,24 @@ body {
 
   .donate {
     right: 20px;
-    top: 8.5%;
+    top: 9.5%;
   }
 
   .donate-button {
     padding: .7rem 1.5rem .7rem 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .moveText {
+    top: 10.5%;
+  }
+
+  .playBox {
+    top: 10.5%;
+  }
+
+  .donate {
+    top: 10.5%;
   }
 }
