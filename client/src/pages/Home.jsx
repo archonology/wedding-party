@@ -22,36 +22,26 @@ const useAudio = () => {
 };
 
 const Home = ({ boxStyle }) => {
+  Auth.loggedIn() ? Auth.getToken() : window.location.assign("/");
   const theme = useTheme();
   const [playing, toggle] = useAudio(weddingTheme);
 
   return (
     <>
-      {Auth.loggedIn ? (
-        <>
-          {" "}
-          <InfoBox boxStyle={boxStyle} />
-          <div className="playBox">
-            <button className="play-button" onClick={toggle}>
-              {playing ? (
-                <>
-                  <PauseIcon sx={{ height: 30, width: 30 }} />
-                </>
-              ) : (
-                <>
-                  <PlayArrowIcon sx={{ height: 30, width: 30 }} />
-                </>
-              )}
-            </button>
-          </div>
-        </>
-      ) : (
-        <>
-          <a href="/" style={{ margin: "3em", fontSize: "30px" }}>
-            login to view invite!
-          </a>
-        </>
-      )}
+      <InfoBox boxStyle={boxStyle} />
+      <div className="playBox">
+        <button className="play-button" onClick={toggle}>
+          {playing ? (
+            <>
+              <PauseIcon sx={{ height: 30, width: 30 }} />
+            </>
+          ) : (
+            <>
+              <PlayArrowIcon sx={{ height: 30, width: 30 }} />
+            </>
+          )}
+        </button>
+      </div>
     </>
   );
 };

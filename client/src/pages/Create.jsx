@@ -6,7 +6,7 @@ import { CREATE_USER } from "../utils/mutations";
 import { validateEmail, validatePassword } from "../utils/helpers";
 import Auth from "../utils/auth";
 
-const Signup = () => {
+const Create = () => {
   const [signupFormData, setSignupFormData] = useState({
     username: "",
     email: "",
@@ -149,4 +149,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Create;

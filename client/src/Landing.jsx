@@ -44,13 +44,13 @@ const darkTheme = createTheme({
 function Landing() {
   return (
     <>
-      <ApolloProvider client={client}>
+      {/* <ApolloProvider client={client}> */}
         <ThemeProvider theme={darkTheme}>
           <div>
             <Login />
           </div>
         </ThemeProvider>
-      </ApolloProvider>
+      {/* </ApolloProvider> */}
     </>
   );
 }
