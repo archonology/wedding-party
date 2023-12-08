@@ -1,7 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Admin, User, Topic, Subtopic, Resource, QuickLink, Post } = require('../models');
+const { User } = require('../models');
 
-const { signToken, signAdminToken } = require("../utils/auth");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
     Query: {
@@ -12,6 +12,11 @@ const resolvers = {
                 return userData;
             }
             throw new AuthenticationError("Please log in to continue");
+        },
+        users: async () => {
+            const userData = await User.find({});
+
+            return userData;
         },
     },
 
