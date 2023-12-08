@@ -64,9 +64,9 @@ const Create = () => {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%" , marginLeft: '2em', marginTop: '-1em' }}>
       <Box>
-        <h2>Create User</h2>
+        <h2>Create New User</h2>
       </Box>
       <Grid
         container
@@ -104,7 +104,7 @@ const Create = () => {
                   label="Username"
                   type="username"
                   name="username"
-                  autoComplete="current-username"
+                  autoComplete="off"
                   value={signupFormData.username}
                   onChange={handleSignupFormChange}
                 />
@@ -115,7 +115,7 @@ const Create = () => {
                   label="Email"
                   type="email"
                   name="email"
-                  autoComplete="current-email"
+                  autoComplete="off"
                   value={signupFormData.email}
                   onChange={handleSignupFormChange}
                 />
@@ -126,7 +126,7 @@ const Create = () => {
                   label="Password"
                   type="password"
                   name="password"
-                  autoComplete="current-password"
+                  autoComplete="off"
                   value={signupFormData.password}
                   onChange={handleSignupFormChange}
                 />
@@ -138,7 +138,7 @@ const Create = () => {
                   color="success"
                   sx={{ m: 1 }}
                 >
-                  Sign up
+                  Create New User
                 </Button>
               </div>
             </Box>

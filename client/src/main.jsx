@@ -13,6 +13,7 @@ import Create from "./pages/Create.jsx";
 import "./index.css";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -36,6 +37,12 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -53,6 +60,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ApolloProvider client={client}>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={darkTheme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </ApolloProvider>
 );

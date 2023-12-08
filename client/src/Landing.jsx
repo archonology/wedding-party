@@ -45,11 +45,11 @@ function Landing() {
   return (
     <>
       {/* <ApolloProvider client={client}> */}
-        <ThemeProvider theme={darkTheme}>
+        {/* <ThemeProvider theme={darkTheme}> */}
           <div>
             <Login />
           </div>
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
       {/* </ApolloProvider> */}
     </>
   );
