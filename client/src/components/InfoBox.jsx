@@ -30,7 +30,7 @@ const InfoBox = ({ boxStyle }) => {
     family1,
     fallcolors,
     cozy,
-    nightpagne,
+    hotel,
     sparkle,
     gifts,
     eats,
