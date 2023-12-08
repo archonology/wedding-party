@@ -14,10 +14,14 @@ import snow from "../assests/snow.jpeg";
 import trampo from "../assests/trampo.jpg";
 import alma from "../assests/alma.jpg";
 import hr from "../assests/hr.jpg";
-import smfall from "../assests/smfall.jpg";
-import smchamp from "../assests/smchamp.jpg";
 import smgifts from "../assests/smgifts.jpg";
 import smcake from "../assests/smcake.jpg";
+import fallcolors from "../assests/fallcolors.jpg";
+import fallcolorsm from "../assests/fallcolorsm.jpeg";
+import hotel from "../assests/hotel.jpeg";
+import hotelsm from "../assests/hotelsm.jpeg";
+import sparkle from "../assests/sparkleschamp.jpeg";
+import snacks from "../assests/snacks.jpeg";
 
 const InfoBox = ({ boxStyle }) => {
   const breakpoint = 570;
@@ -25,23 +29,23 @@ const InfoBox = ({ boxStyle }) => {
 
   let imgArray = [
     family1,
-    fallpagne,
+    fallcolors,
     cozy,
     nightpagne,
-    party,
+    sparkle,
     gifts,
     eats,
     beach,
   ];
   if (window.innerWidth < breakpoint) {
-    imgArray = [hr, smfall, trampo, smchamp, alma, smgifts, smcake, snow];
+    imgArray = [hr, fallcolorsm, trampo, hotelsm, alma, smgifts, snacks, snow];
   } else {
     imgArray = [
       family1,
-      fallpagne,
+      fallcolors,
       cozy,
-      nightpagne,
-      party,
+      hotel,
+      sparkle,
       gifts,
       eats,
       beach,
