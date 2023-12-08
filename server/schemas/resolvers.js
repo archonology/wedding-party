@@ -10,7 +10,7 @@ const resolvers = {
                     .select("-__v -password");
                 return userData;
             }
-            throw new Error("Please log in to continue");
+            // throw new Error("Please log in to continue");
         },
         users: async () => {
             const userData = await User.find({});
@@ -33,9 +33,9 @@ const resolvers = {
 
             const correctPassword = await user.isCorrectPassword(password);
 
-            if (!correctPassword) {
-                throw new Error('Password is incorrect.');
-            }
+            // if (!correctPassword) {
+            //     throw new ('Password is incorrect.');
+            // }
 
             const token = signToken(user);
             return { token, user };

@@ -1,191 +1,58 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
-import { Grid, Button, TextField } from "@mui/material";
-import { useMutation } from "@apollo/client";
-import { LOGIN_USER } from "../utils/mutations";
-import { Link } from "react-router-dom";
-import { validateEmail } from "../utils/helpers";
-import Auth from "../utils/auth";
+import { useState } from "react";
+import "./index.css";
+import "./App.css";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Login from "./pages/Login";
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+// Construct our main GraphQL API endpoint
+const httpLink = createHttpLink({
+  uri: "/graphql",
+});
 
-  return (
-    <div
-      role="tabpanel"
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
-function a11yProps(index) {
+// Construct request middleware that will attach the JWT token to every request as an `authorization` header
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem("id_token");
+  // return the headers to the context so httpLink can read them
   return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
   };
-}
+});
 
-const Landing = () => {
-  const [loginFormData, setLoginFormData] = useState({
-    email: "",
-    password: "",
-  });
-  const [loginUser, { error, data }] = useMutation(LOGIN_USER);
-  const [errorMessage, setErrorMessage] = useState("");
-  const [value, setValue] = React.useState(0);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+const client = new ApolloClient({
+  // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
-  // update state based on login form input changes
-  const handleLoginFormChange = (event) => {
-    const { name, value } = event.target;
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
 
-    setLoginFormData({
-      ...loginFormData,
-      [name]: value,
-    });
-  };
-
-  // submit Login form
-  const handleLoginSubmit = async (event) => {
-    event.preventDefault();
-
-    if (!validateEmail(loginFormData.email)) {
-      setErrorMessage(`
-      Sorry, the email is missing something. 
-      Please check it and try again, 
-      thanks! 🪴
-      `);
-      return;
-    }
-
-    try {
-      const { data } = await loginUser({
-        variables: { ...loginFormData },
-      });
-      Auth.login(data.loginUser.token);
-    } catch (error) {
-      console.error(error);
-      setErrorMessage(
-        `There was a problem with your password or email address. Please make sure you have the correct email and password entered, then try again.`
-      );
-    }
-    // clear form values
-    setLoginFormData({
-      email: "",
-      password: "",
-    });
-  };
-
+function Landing() {
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box>
-        <Tabs
-          sx={{ m: 3 }}
-          value={value}
-          onChange={handleChange}
-          textColor="primary"
-          indicatorColor="primary"
-          aria-label="User login and sign up tabs"
-        >
-          <Tab label="Login" {...a11yProps(0)} />
-        </Tabs>
-      </Box>
-      <TabPanel value={value} index={0}>
-        <Grid
-          container
-          spacing={0}
-          direction="column"
-          alignItems="right"
-          justifyContent="right"
-          style={{ minHeight: "25vh" }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              color: "#fff",
-            }}
-          >
-            <Grid item>
-              <Box
-                component="form"
-                sx={{
-                  "& .MuiTextField-root": { m: 1, minWidth: "300px" },
-                  borderColor: "teal",
-                }}
-                autoComplete="off"
-                onSubmit={handleLoginSubmit}
-              >
-                {errorMessage && (
-                  <div>
-                    <p className="error-text">{errorMessage}</p>
-                  </div>
-                )}
-
-                <div>
-                  <TextField
-                    id="login-email-input"
-                    label="Email"
-                    type="email"
-                    name="email"
-                    autoComplete="current-email"
-                    value={loginFormData.email}
-                    onChange={handleLoginFormChange}
-                  />
-                </div>
-                <div>
-                  <TextField
-                    id="login-password-input"
-                    label="Password"
-                    type="password"
-                    name="password"
-                    autoComplete="current-password"
-                    value={loginFormData.password}
-                    onChange={handleLoginFormChange}
-                  />
-                </div>
-                <div>
-                  <Button type="submit" variant="contained" sx={{ m: 1 }}>
-                    Login
-                  </Button>
-                </div>
-                <div className="mt-3">
-                  <Button
-                    as={Link}
-                    to="/signup"
-                    variant="contained"
-                    color="success"
-                    className="link"
-                    sx={{
-                      margin: 1,
-                      paddingBlock: 1.25,
-                      textDecoration: "none",
-                    }}
-                  >
-                    Go to Signup Form
-                  </Button>
-                </div>
-              </Box>
-            </Grid>
-          </Box>
-        </Grid>
-      </TabPanel>
-    </Box>
+    <>
+      <ApolloProvider client={client}>
+        <ThemeProvider theme={darkTheme}>
+          <div>
+            <Login />
+          </div>
+        </ThemeProvider>
+      </ApolloProvider>
+    </>
   );
-};
+}
 
 export default Landing;

@@ -5,6 +5,7 @@ import weddingTheme from "../assests/weddingTheme.mp3";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import InfoBox from "../components/InfoBox";
+import Auth from "../utils/auth";
 
 const useAudio = () => {
   const [audio] = useState(new Audio(weddingTheme));
@@ -26,20 +27,29 @@ const Home = ({ boxStyle }) => {
 
   return (
     <>
-      <InfoBox boxStyle={boxStyle} />
-      <div className="playBox">
-        <button className="play-button" onClick={toggle}>
-          {playing ? (
-            <>
-              <PauseIcon sx={{ height: 30, width: 30 }} />
-            </>
-          ) : (
-            <>
-              <PlayArrowIcon sx={{ height: 30, width: 30 }} />
-            </>
-          )}
-        </button>
-      </div>
+      {Auth.loggedIn ? (
+        <>
+          {" "}
+          <InfoBox boxStyle={boxStyle} />
+          <div className="playBox">
+            <button className="play-button" onClick={toggle}>
+              {playing ? (
+                <>
+                  <PauseIcon sx={{ height: 30, width: 30 }} />
+                </>
+              ) : (
+                <>
+                  <PlayArrowIcon sx={{ height: 30, width: 30 }} />
+                </>
+              )}
+            </button>
+          </div>
+        </>
+      ) : (
+        <>
+          <a href="/">login to view invite!</a>
+        </>
+      )}
     </>
   );
 };
