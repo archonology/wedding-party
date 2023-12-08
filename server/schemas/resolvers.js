@@ -1,16 +1,16 @@
 const { User } = require('../models');
-
-const { signToken } = require("../utils/auth");
+const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
     Query: {
         me: async (parent, args, context) => {
             if (context.user) {
-                const userData = await User.findOne({ _id: context.user._id })
-                    .select("-__v -password");
+                const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
+
                 return userData;
             }
-            // throw new Error("Please log in to continue");
+
+            throw AuthenticationError;
         },
         users: async () => {
             const userData = await User.find({});
@@ -27,15 +27,16 @@ const resolvers = {
         },
         loginUser: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
+
             if (!user) {
-                throw new AuthenticationError('No user found by that email address.');
+                throw AuthenticationError;
             }
 
-            const correctPassword = await user.isCorrectPassword(password);
+            const correctPw = await user.isCorrectPassword(password);
 
-            // if (!correctPassword) {
-            //     throw new ('Password is incorrect.');
-            // }
+            if (!correctPw) {
+                throw AuthenticationError;
+            }
 
             const token = signToken(user);
             return { token, user };
