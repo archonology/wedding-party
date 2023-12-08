@@ -4,7 +4,7 @@ const info = [
     heading1: "Heidi & Reed's",
     heading2: "Post-Wedding Party",
     details:
-      "On 12/31/23, Heidi & Reed were married in their home with a small ceremony surrounded by their three daugthers and parents. They wanted a winter wedding by the fireplace, but also a big, fun-filled October party in Heidi's home town of Hoyt Lakes, MN.",
+      "On 12/31/23, Heidi & Reed are getting married in their home with a small ceremony surrounded by their three daugthers and parents. They wanted a winter wedding by the fireplace, but also a big, fun-filled October party in Heidi's home town of Hoyt Lakes, MN.",
     link: "",
     btnText: "When is the party?",
   },
