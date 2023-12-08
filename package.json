@@ -1,0 +1,20 @@
+{
+  "name": "wedding-party",
+  "version": "1.0",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
+  "description": "Private wedding landing page",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
+  },
+  "authors": "Reed Meher of MeherDevs LLC",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}

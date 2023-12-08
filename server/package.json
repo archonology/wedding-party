@@ -1,13 +1,13 @@
 {
-  "name": "wedding-party",
+  "name": "server",
   "version": "1.0.0",
-  "description": "private landing page for wedding",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js"
   },
-  "author": "Reed Meher",
+  "author": "Reed Meher of MeherDevs LLC",
   "dependencies": {
     "apollo-server-express": "^3.11.1",
     "bcrypt": "^5.0.0",
