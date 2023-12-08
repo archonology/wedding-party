@@ -44,24 +44,7 @@ const Header = () => {
                     Info
                   </Button>
                   <Menu {...bindMenu(popupState)}>
-                    {/* <MenuItem onClick={popupState.close}>
-                      <a href={weddingInfo} download={weddingInfo}>
-                        <Typography
-                          color="secondary"
-                          style={{
-                            fontFamily: "barriecito",
-                            fontSize: "40px",
-                            fontWeight: "700",
-                            marginLeft: "1px",
-                          }}
-                        >
-                          <span>
-                            <DownloadIcon style={{ marginRight: "5px" }} />
-                          </span>
-                          Info{" "}
-                        </Typography>
-                      </a>
-                    </MenuItem> */}
+    
                     <MenuItem onClick={popupState.close}>
                       <a
                         href="https://www.google.com/maps/place/101+Kennedy+Memorial+Dr,+Hoyt+Lakes,+MN+55750/@47.5203144,-92.1517386,17z/data=!3m1!4b1!4m6!3m5!1s0x52a57b69aff0ae05:0x47a1787c383c706f!8m2!3d47.5203144!4d-92.1491637!16s%2Fg%2F11cpn1rq17?entry=ttu"

@@ -18,7 +18,7 @@ body {
   font-size: 20px;
   color: #fef3f3;
   border: none;
-  box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742);
+  /* box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742); */
   transition: .7s;
   z-index: 1;
   /* margin-right: 20px; */
@@ -37,7 +37,7 @@ body {
   font-size: 20px;
   color: #fef3f3;
   border: none;
-  box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742);
+  /* box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742); */
   transition: .7s;
   z-index: 1;
   /* margin-right: 20px; */
@@ -51,12 +51,12 @@ body {
 }
 
 .donate-button {
-  padding: .7em 2em .7em 2em;
+  padding: .67em 2em .67em 2em;
   background-color: rgb(28, 28, 28);
   font-size: 20px;
   color: rgb(254, 243, 243);
   border: none;
-  box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742);
+  /* box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742); */
   transition: .7s;
   z-index: 1;
   /* margin-right: 20px; */

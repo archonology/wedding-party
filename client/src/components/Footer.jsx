@@ -12,7 +12,7 @@ const Footer = () => {
         >
           <p
             style={{
-              marginTop: "2.5em",
+              marginTop: "1.2em",
             }}
           >
             Made by MeherDevs | 2023
