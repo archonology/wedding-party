@@ -53,7 +53,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/create",
+    path: import.meta.env.VITE_CREATE_USER_KEY,
     element: <Create />,
   },
 ]);
