@@ -15,7 +15,6 @@ import trampo from "../assests/trampo.jpg";
 import alma from "../assests/alma.jpg";
 import hr from "../assests/hr.jpg";
 import smgifts from "../assests/smgifts.jpg";
-import smcake from "../assests/smcake.jpg";
 import fallcolors from "../assests/fallcolors.jpg";
 import fallcolorsm from "../assests/fallcolorsm.jpeg";
 import hotel from "../assests/hotel.jpeg";
