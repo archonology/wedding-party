@@ -1,4 +1,3 @@
-const { AuthenticationError } = require('apollo-server-express');
 const { User } = require('../models');
 
 const { signToken } = require("../utils/auth");
@@ -11,7 +10,7 @@ const resolvers = {
                     .select("-__v -password");
                 return userData;
             }
-            throw new AuthenticationError("Please log in to continue");
+            throw new Error("Please log in to continue");
         },
         users: async () => {
             const userData = await User.find({});
@@ -35,7 +34,7 @@ const resolvers = {
             const correctPassword = await user.isCorrectPassword(password);
 
             if (!correctPassword) {
-                throw new AuthenticationError('Password is incorrect.');
+                throw new Error('Password is incorrect.');
             }
 
             const token = signToken(user);
