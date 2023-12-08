@@ -47,7 +47,9 @@ const Home = ({ boxStyle }) => {
         </>
       ) : (
         <>
-          <a href="/">login to view invite!</a>
+          <a href="/" style={{ margin: "3em", fontSize: "30px" }}>
+            login to view invite!
+          </a>
         </>
       )}
     </>
