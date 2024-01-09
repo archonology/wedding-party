@@ -12,25 +12,25 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import Create from "./pages/Create"
+import Create from "./pages/Create";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import "vite/modulepreload-polyfill";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
   // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -58,23 +58,12 @@ function App() {
     textAlign: "left",
     flexWrap: "wrap",
     zIndex: 0,
-    transition: ".3s ease-in-out",
+    // transition: ".3s ease-in-out",
+    visibility: "visible"
   };
 
   const boxstyle2 = {
-    // width: "2px",
-    color: "black",
-    maxWidth: "10px",
-    float: "right",
-    marginLeft: "100%",
-    height: "auto",
-    padding: "0em",
-    paddingTop: "-.5em",
-    backgroundColor: "black",
-    textAlign: "left",
-    flexWrap: "no-wrap",
-    zIndex: 0,
-    transition: ".3s ease-in-out",
+      visibility: "hidden"
   };
   const [clicked, setClicked] = useState(false);
   const [boxStyle, setBoxStyle] = useState(boxstyle1);
@@ -91,33 +80,33 @@ function App() {
   return (
     <>
       {/* <ApolloProvider client={client}> */}
-        <ThemeProvider theme={darkTheme}>
-            <Header />
-            <div className="donate">
-              <a
-                href="https://buy.stripe.com/3csbIR2S89s03oA002"
-                target="_blank"
-                rel="nonreferrer"
-              >
-                <button className="donate-button">Give</button>
-              </a>
-            </div>
-            <Home boxStyle={boxStyle} />
-            <Footer />
-            <div className="moveText">
-              <button className="move-button" onClick={() => handleBox()}>
-                {clicked ? (
-                  <>
-                    <ArrowBackIosIcon sx={{ height: 30, width: 30 }} />
-                  </>
-                ) : (
-                  <>
-                    <ArrowForwardIosIcon sx={{ height: 30, width: 30 }} />
-                  </>
-                )}
-              </button>
-            </div>
-        </ThemeProvider>
+      <ThemeProvider theme={darkTheme}>
+        <Header />
+        <div className="donate">
+          <a
+            href="https://buy.stripe.com/3csbIR2S89s03oA002"
+            target="_blank"
+            rel="nonreferrer"
+          >
+            <button className="donate-button">Give</button>
+          </a>
+        </div>
+        <Home boxStyle={boxStyle} />
+        <Footer />
+        <div className="moveText">
+          <button className="move-button" onClick={() => handleBox()}>
+            {clicked ? (
+              <>
+                <ArrowBackIosIcon sx={{ height: 30, width: 30 }} />
+              </>
+            ) : (
+              <>
+                <ArrowForwardIosIcon sx={{ height: 30, width: 30 }} />
+              </>
+            )}
+          </button>
+        </div>
+      </ThemeProvider>
       {/* </ApolloProvider> */}
     </>
   );
