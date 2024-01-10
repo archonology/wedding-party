@@ -65,8 +65,8 @@ const InfoBox = ({ boxStyle }) => {
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-              width: "100vw",
-              height: "100vh",
+              width: "100dvw",
+              height: "100dvh",
               display: "flex",
               justifyContent: "right",
               alignItems: "center",
@@ -78,14 +78,14 @@ const InfoBox = ({ boxStyle }) => {
             <div className="textBox" style={boxStyle}>
               <p
                 style={{
-                  fontSize: "2.5vh",
+                  fontSize: "2.5dvh",
                 }}
               >
                 {info[textIndex].preheading}
               </p>
               <h1
                 style={{
-                  fontSize: "3.5vh",
+                  fontSize: "3.5dvh",
                   fontWeight: "700",
                   lineHeight: "1.4",
                 }}
@@ -97,7 +97,7 @@ const InfoBox = ({ boxStyle }) => {
               <p
                 style={{
                   textAlign: "left",
-                  fontSize: "2.1vh",
+                  fontSize: "2.1dvh",
                 }}
               >
                 {info[textIndex].details}
@@ -107,7 +107,7 @@ const InfoBox = ({ boxStyle }) => {
               </p>
               <button
                 className="proceed-btn"
-                style={{ fontSize: "2.1vh" }}
+                style={{ fontSize: "2.1dvh" }}
                 onClick={(e) => handleNext(e)}
               >
                 {info[textIndex].btnText}
