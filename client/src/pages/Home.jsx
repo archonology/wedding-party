@@ -5,7 +5,7 @@ import weddingTheme from "../assests/weddingTheme.mp3";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import InfoBox from "../components/InfoBox";
-import Auth from "../utils/auth";
+// import Auth from "../utils/auth";
 
 const useAudio = () => {
   const [audio] = useState(new Audio(weddingTheme));
@@ -22,7 +22,7 @@ const useAudio = () => {
 };
 
 const Home = ({ boxStyle }) => {
-  Auth.loggedIn() ? Auth.getToken() : window.location.assign("/");
+  // Auth.loggedIn() ? Auth.getToken() : window.location.assign("/");
   const theme = useTheme();
   const [playing, toggle] = useAudio(weddingTheme);
 
