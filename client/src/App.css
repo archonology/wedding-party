@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+  height: 100dvh;
   margin: 0;
   scroll-behavior: smooth;
 }
@@ -8,7 +8,7 @@ body {
 .moveText {
   position: absolute;
   right: 275px;
-  top: 9.8%;
+  top: 7%;
   z-index: 1;
 }
 
@@ -27,7 +27,7 @@ body {
 .playBox {
   position: absolute;
   right: 147px;
-  top: 9.8%;
+  top: 7%;
   z-index: 1;
 }
 
@@ -46,12 +46,12 @@ body {
 .donate {
   position: absolute;
   right: 20px;
-  top: 9.5%;
+  top: 7%;
   z-index: 1;
 }
 
 .donate-button {
-  padding: .67em 2em .67em 2em;
+  padding: .60em 2em .58em 2em;
   background-color: rgb(28, 28, 28);
   font-size: 20px;
   color: rgb(254, 243, 243);
@@ -69,7 +69,7 @@ body {
   color: rgb(17, 17, 17);
   border: none;
   box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.742);
-  transition: .7s;
+  /* transition: .7s; */
   margin-left: 10px;
   margin-bottom: 10px;
 }
@@ -92,25 +92,26 @@ body {
 }
 
 .move-button:hover {
-  background-color: rgb(126, 51, 51);
+  background-color: rgb(254, 208, 56);
 }
 
 .play-button:hover {
-  background-color: rgb(170, 95, 140);
+  background-color: hwb(117 35% 18%);
 }
 
 .donate-button:hover {
-  background-color: #3c5241;
+  background-color: #fc077d;
 }
 
 .proceed-btn:hover {
-  background-color: rgb(239, 207, 77);
+  background-color: hwb(300 57% 0%);
+  outline: none;
 }
 
 @media only screen and (max-width: 560px) {
   .moveText {
     right: 210px;
-    top: 9.5%;
+    top: 8%;
   }
 
   .move-button {
@@ -119,7 +120,7 @@ body {
 
   .playBox {
     right: 120px;
-    top: 9.5%;
+    top: 8%;
   }
 
   .play-button {
@@ -128,7 +129,7 @@ body {
 
   .donate {
     right: 20px;
-    top: 9.5%;
+    top: 8%;
   }
 
   .donate-button {
@@ -138,14 +139,14 @@ body {
 
 @media only screen and (max-width: 410px) {
   .moveText {
-    top: 10.5%;
+    top: 8%;
   }
 
   .playBox {
-    top: 10.5%;
+    top: 8%;
   }
 
   .donate {
-    top: 10.5%;
+    top: 8%;
   }
 }

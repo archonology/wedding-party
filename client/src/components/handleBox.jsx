@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const handleBox = () => {
   const boxstyle1 = {
-    maxWidth: "580px",
+    maxWidth: "980px",
     height: "auto",
     color: "#fef3f3",
     padding: "1.5em",
